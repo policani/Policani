@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study Markdown Builder</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --ink: #1d2430;
+    --muted: #586474;
+    --line: #d8dee8;
+    --soft: #eef3f7;
+    --accent: #1f6f78;
+    --accent-ink: #ffffff;
+    --danger: #a43232;
+    --warn-bg: #fff7e8;
+    --warn-line: #f0c36d;
+    --ok: #276749;
+    --shadow: 0 10px 28px rgba(26, 37, 52, 0.08);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.45;
+  }
+  header {
+    padding: 22px clamp(16px, 3vw, 34px);
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .topbar {
+    max-width: 1480px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 750;
+  }
+  .lede {
+    margin: 4px 0 0;
+    color: var(--muted);
+    max-width: 790px;
+  }
+  main {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 22px clamp(16px, 3vw, 34px) 40px;
+    display: grid;
+    grid-template-columns: minmax(360px, 0.95fr) minmax(420px, 1.05fr);
+    gap: 22px;
+  }
+  .workspace {
+    display: grid;
+    gap: 16px;
+    align-content: start;
+  }
+  section, .preview-shell {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  section {
+    padding: 18px;
+  }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  h3 {
+    margin: 0 0 10px;
+    font-size: 15px;
+  }
+  .hint {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .example {
+    margin: 6px 0 6px;
+    color: #415063;
+    background: #f2f6f8;
+    border: 1px solid #dce6ee;
+    border-radius: 7px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .story-guide {
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .guide-step {
+    border: 1px solid var(--line);
+    background: #fbfcfe;
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .guide-step strong {
+    display: block;
+    margin-bottom: 2px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .full { grid-column: 1 / -1; }
+  label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  input, textarea, select {
+    width: 100%;
+    border: 1px solid #c8d1dc;
+    border-radius: 7px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    padding: 9px 10px;
+  }
+  input[readonly] {
+    background: #eef3f7;
+    color: var(--muted);
+  }
+  textarea {
+    min-height: 92px;
+    resize: vertical;
+  }
+  textarea.tall {
+    min-height: 128px;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: 2px solid rgba(31, 111, 120, 0.22);
+    border-color: var(--accent);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  button, .file-button {
+    border: 0;
+    border-radius: 7px;
+    padding: 9px 12px;
+    min-height: 38px;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+  button.secondary, .file-button.secondary {
+    background: #3f4d5c;
+  }
+  button.ghost {
+    background: var(--soft);
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+  button.danger {
+    background: var(--danger);
+  }
+  .file-button input {
+    display: none;
+  }
+  .validation {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-line);
+    color: #664713;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .validation.ok {
+    background: #edf7f0;
+    border-color: #94c7a3;
+    color: var(--ok);
+  }
+  .validation ul {
+    margin: 6px 0 0 20px;
+    padding: 0;
+  }
+  .preview-shell {
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 124px);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+  }
+  .preview-head {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+  }
+  .preview-head h2 {
+    font-size: 16px;
+  }
+  pre {
+    margin: 0;
+    padding: 18px;
+    overflow: auto;
+    background: #121821;
+    color: #eef3f8;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+  }
+  .status {
+    color: var(--muted);
+    font-size: 12px;
+    min-height: 18px;
+  }
+  @media (max-width: 980px) {
+    header { position: static; }
+    main { grid-template-columns: 1fr; }
+    .preview-shell {
+      position: static;
+      max-height: none;
+      min-height: 420px;
+    }
+  }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .topbar, .section-head, .preview-head { align-items: stretch; flex-direction: column; }
+    button, .file-button { width: 100%; text-align: center; }
+    .actions { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <div>
+      <h1>Case Study Markdown Builder</h1>
+      <p class="lede">Turn one real work example into a clear story you can use for resumes, cover letters, and interviews. Pick one situation, explain what was wrong, what you did, and what got better.</p>
+      <p class="lede">Want to see completed examples first? Open the <a href="../docs/sample-builder-outputs/sample-case-study-service-request-backlog-reset.md">backlog reset sample</a> or the <a href="../docs/sample-builder-outputs/sample-case-study-refund-error-reduction.md">refund error sample</a>.</p>
+    </div>
+    <div class="actions" aria-label="Page actions">
+      <button type="button" class="ghost" id="loadSample">Load sample</button>
+      <button type="button" class="secondary" id="downloadJson">Save builder data</button>
+      <label class="file-button secondary">Load builder data<input type="file" id="importJson" accept="application/json,.json"></label>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="workspace">
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>1. Pick the Kind of Story</h2>
+          <p class="hint">Choose the first option for most work stories: fixing a process, finishing a project, solving a problem, or getting messy work under control. Choose the second option when the story is mainly about money, budget, customers, risk, rules, audits, or a large amount of work.</p>
+        </div>
+      </div>
+      <div class="story-guide">
+        <div class="guide-step"><strong>Simple story pattern</strong>What was happening? Why was it a problem? What did you do? What changed afterward?</div>
+        <div class="guide-step"><strong>Use numbers when you can</strong>Numbers can be dollars, weeks, hours, requests, tickets, customers, people, locations, mistakes, meetings, deadlines, or percent changes.</div>
+        <div class="guide-step"><strong>If you do not have a number</strong>Use a clear before-and-after statement, such as faster responses, fewer repeats, clearer ownership, less rework, better reporting, or fewer escalations.</div>
+      </div>
+      <div class="grid" style="margin-top: 14px;">
+        <div>
+          <label for="templateType">Case study template</label>
+          <p class="example">Plain example: Pick the first option if the story is about fixing a broken request process. Pick the second option if the story is mainly about saving money or reducing risk.</p>
+          <select id="templateType">
+            <option value="complex">Template 1 - Problem, project, or process fix</option>
+            <option value="commercial">Template 2 - Money, risk, customers, or scale</option>
+          </select>
+        </div>
+        <div>
+          <label for="caseTitle">Case study title</label>
+          <p class="example">Plain example: Service Request Backlog Reset.</p>
+          <input id="caseTitle" placeholder="Service Request Backlog Reset">
+        </div>
+        <div class="full">
+          <label for="fileName">Generated download filename</label>
+          <p class="example">Plain example: case-study-service-request-backlog-reset.md.</p>
+          <input id="fileName" readonly aria-readonly="true">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>2. What This Story Helps Prove</h2>
+          <p class="hint">Tell the system what kinds of jobs or skills this story supports. This helps it reuse the story in the right places later.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="full">
+          <label for="purposeSignals">Jobs or skills this story supports</label>
+          <p class="example">Plain example: This helps prove operations, project delivery, customer escalation, process improvement, and team coordination.</p>
+          <textarea id="purposeSignals" placeholder="This story helps prove operations, project delivery, customer support, process improvement, and team coordination."></textarea>
+        </div>
+        <div class="full">
+          <label for="context">Context</label>
+          <p class="example">Plain example: In 2024, a customer operations team had more work requests than the old tracking process could handle.</p>
+          <textarea id="context" class="tall" placeholder="Where did this happen? When did it happen? What was going on? Why did it matter?"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>3. The Problem and How Big It Was</h2>
+          <p class="hint">Explain why the problem mattered. Add numbers where you can: how many people, requests, customers, dollars, systems, locations, or weeks were involved.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="full">
+          <label for="stakes">Why it mattered or what made it hard</label>
+          <p class="example">Plain example: 180 open requests were slowing down follow-up, three teams were using different trackers, and leaders needed a clear update by month-end.</p>
+          <textarea id="stakes" class="tall" placeholder="One fact per line. Example: 180 open requests were slowing down follow-up."></textarea>
+        </div>
+        <div class="full">
+          <label for="scale">Size of the work</label>
+          <p class="example">Plain example: 180 requests, 3 teams, 2 customer groups, weekly leader review, and 1 shared dashboard.</p>
+          <textarea id="scale" placeholder="Add numbers if you have them: requests, dollars, customers, people, systems, locations, deadlines, or weeks."></textarea>
+        </div>
+        <div class="full">
+          <label for="problem">Problem</label>
+          <p class="example">Plain example: The obvious problem was a request backlog. The deeper problem was unclear ownership, inconsistent notes, and no shared priority rules.</p>
+          <textarea id="problem" class="tall" placeholder="What was the obvious problem? What was causing it? What might have gone wrong if nothing changed?"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>4. Choices You Had</h2>
+          <p class="hint">List the realistic choices. They do not have to be dramatic. This section simply shows that you thought through the problem before acting.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="full">
+          <label for="options">Choices you considered</label>
+          <p class="example">Plain example: Option 1 - keep the old tracker. Pros: quick. Cons: still messy. Option 2 - buy a new tool. Pros: powerful. Cons: too slow. Option 3 - standardize the tracker. Pros: fast and easy to adopt. Cons: required weekly follow-up.</p>
+          <textarea id="options" class="tall" placeholder="Write one option per line, with the basic pro and con."></textarea>
+        </div>
+        <div class="full">
+          <label for="decision">What you chose and why</label>
+          <p class="example">Plain example: I chose a simple intake standard and dashboard because it fixed the visibility problem quickly without waiting for a new system.</p>
+          <textarea id="decision" class="tall" placeholder="What did you choose to do? Why did that choice make sense?"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>5. What You Did</h2>
+          <p class="hint">Say what you personally did. Also be clear about what you did not own, approve, or control.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="full">
+          <label for="yourRole">Your role</label>
+          <p class="example">Plain example: I coordinated the reset, wrote the rules, built the dashboard, and kept team leads aligned. I did not make final staffing decisions.</p>
+          <textarea id="yourRole" placeholder="What were you responsible for? What did someone else own or approve?"></textarea>
+        </div>
+        <div class="full">
+          <label for="actions">Actions</label>
+          <p class="example">Plain example: Grouped requests by urgency, created a shared status view, set a weekly review, and documented the new intake rules.</p>
+          <textarea id="actions" class="tall" placeholder="One action per line. Example: Created a weekly tracker for open requests."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>6. What Changed</h2>
+          <p class="hint">Write what got better. A measured result is best, but a clear before-and-after change is also useful.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="full">
+          <label for="outcomes">Outcomes</label>
+          <p class="example">Plain example: Reduced open requests from 180 to 42 in six weeks, gave leaders a weekly status view, and reduced duplicate follow-up messages.</p>
+          <textarea id="outcomes" class="tall" placeholder="One result per line. Use numbers or clear before-and-after changes when you can."></textarea>
+        </div>
+        <div class="full">
+          <label for="whatChanged">What changed</label>
+          <p class="example">Plain example: Before, requests lived in scattered notes. After, each request had an owner, priority, status, and next step.</p>
+          <textarea id="whatChanged" placeholder="Describe before and after in practical terms."></textarea>
+        </div>
+        <div class="full">
+          <label for="whyMattered">Why it mattered</label>
+          <p class="example">Plain example: Customers got faster answers, and leaders could see where help was needed.</p>
+          <textarea id="whyMattered" placeholder="Why was this useful for customers, the team, leaders, safety, cost, risk, or speed?"></textarea>
+        </div>
+        <div class="full">
+          <label for="evidenceQuality">How you know the result is true</label>
+          <p class="example">Plain example: Measured: backlog count from the weekly tracker. Observed: fewer escalation messages. Reasonable conclusion: planning improved because leaders used the same dashboard each week.</p>
+          <textarea id="evidenceQuality" placeholder="How do you know it worked? Use tracker counts, reports, customer feedback, fewer complaints, or other proof."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>7. Short Version and Boundaries</h2>
+          <p class="hint">Write the short version employers can understand. Then list what the story proves and what would be exaggerating.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="full">
+          <label for="employerSummary">Employer-facing summary</label>
+          <p class="example">Plain example: Led a backlog reset that clarified ownership, improved leader visibility, and reduced open requests from 180 to 42 in six weeks.</p>
+          <textarea id="employerSummary" placeholder="Write 2-3 sentences that could inform a resume, cover letter, or interview answer."></textarea>
+        </div>
+        <div class="full">
+          <label for="claimsAllowed">What this story proves</label>
+          <p class="example">Plain example: This story proves backlog reduction, weekly operating rhythm, dashboard visibility, team coordination, and practical process documentation.</p>
+          <textarea id="claimsAllowed" placeholder="One truthful takeaway per line. Example: Improved request tracking."></textarea>
+        </div>
+        <div class="full">
+          <label for="claimsNotAllowed">What not to overstate</label>
+          <p class="example">Plain example: Do not claim direct revenue impact, hiring authority, or ownership of the customer platform.</p>
+          <textarea id="claimsNotAllowed" placeholder="One thing not to exaggerate per line. Example: Do not claim revenue impact unless you can prove it."></textarea>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <aside class="preview-shell" aria-label="Markdown preview">
+    <div class="preview-head">
+      <div>
+        <h2>Markdown Preview</h2>
+        <div class="status" id="status">Autosaved in this browser.</div>
+      </div>
+      <div class="actions">
+        <button type="button" class="ghost" id="refreshPreview">Refresh Preview</button>
+        <button type="button" class="ghost" id="copyMarkdown">Copy Markdown</button>
+        <button type="button" id="downloadMarkdown">Download .md</button>
+        <button type="button" class="danger" id="clearAll">Clear</button>
+      </div>
+    </div>
+    <div>
+      <div id="validation" class="validation"></div>
+      <pre id="preview"></pre>
+    </div>
+  </aside>
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  const STORAGE_KEY = "resume-evidence-engine.case-study-builder.v2";
+  const preview = document.getElementById("preview");
+  const validation = document.getElementById("validation");
+  const status = document.getElementById("status");
+
+  const fields = [
+    "templateType", "caseTitle", "fileName", "purposeSignals", "context",
+    "stakes", "scale", "problem", "options", "decision", "yourRole",
+    "actions", "outcomes", "whatChanged", "whyMattered", "evidenceQuality",
+    "employerSummary", "claimsAllowed", "claimsNotAllowed"
+  ];
+
+  const sampleData = {
+    templateType: "complex",
+    caseTitle: "Service Request Backlog Reset",
+    fileName: "case-study-service-request-backlog-reset.md",
+    purposeSignals: "This story helps prove operations, project delivery, customer escalation, process improvement, team coordination, and simple reporting.",
+    context: "At Northstar Systems in 2024, the customer operations team was handling a growing mix of support requests, implementation follow-ups, and internal status questions. The work mattered because delayed answers were creating customer frustration and making weekly leadership reviews less useful.",
+    stakes: [
+      "180 open requests were waiting for review or follow-up.",
+      "3 teams were tracking work in different formats.",
+      "Leadership needed a clear status view before the next monthly business review."
+    ].join("\n"),
+    scale: "180 requests, 3 teams, 2 customer segments, weekly leadership review, 1 shared dashboard, 6-week reset window.",
+    problem: "The visible symptom was a large backlog of open requests. The root problem was unclear ownership, uneven intake notes, and no shared rule for deciding what needed action first.",
+    options: [
+      "Option 1 - Keep the old tracker. Pros: no new process to teach. Cons: it kept the same visibility and ownership problems.",
+      "Option 2 - Wait for a new workflow tool. Pros: more scalable later. Cons: too slow for the immediate backlog and leadership deadline.",
+      "Option 3 - Standardize intake and create a shared dashboard. Pros: fast, understandable, and easy to adopt. Cons/tradeoff: required weekly discipline from team leads."
+    ].join("\n"),
+    decision: "I chose a lightweight intake standard and shared dashboard because it fixed the immediate visibility gap without waiting for a new system. The approach was simple enough for team leads to use every week and specific enough to show which requests needed action.",
+    yourRole: "I coordinated the reset, created the working rules, built the dashboard, and kept team leads aligned. I did not own final staffing decisions or the underlying customer platform.",
+    actions: [
+      "Grouped requests by urgency, owner, customer segment, and next step.",
+      "Created a shared dashboard showing status, age, owner, and blocker.",
+      "Set a weekly review rhythm with team leads to close stale items and update priorities.",
+      "Documented intake rules so new requests had enough detail to route correctly."
+    ].join("\n"),
+    outcomes: [
+      "Reduced open backlog from 180 to 42 requests in six weeks.",
+      "Gave leaders a weekly status view for ownership, age, blockers, and next steps.",
+      "Reduced duplicate follow-up messages because teams could see status in one place."
+    ].join("\n"),
+    whatChanged: "Before the reset, requests lived in scattered notes and different team trackers. After the reset, each request had an owner, priority, current status, blocker if any, and next action.",
+    whyMattered: "The change gave customers faster answers, helped team leads focus on the oldest and highest-risk items, and gave leadership a clearer view of where help was needed.",
+    evidenceQuality: "Measured: backlog count from the weekly tracker before and after the six-week reset. Observed: fewer duplicate follow-up messages and cleaner weekly reviews. Reasonable conclusion: planning improved because leaders reviewed the same status view each week.",
+    employerSummary: "Led a practical service-request backlog reset across three teams, creating shared intake rules, a weekly review rhythm, and a dashboard for ownership and blockers. Reduced open requests from 180 to 42 in six weeks while improving leadership visibility and team follow-through.",
+    claimsAllowed: [
+      "Can claim backlog reduction from 180 to 42 requests in six weeks.",
+      "Can claim weekly review rhythm, intake standardization, dashboard visibility, and team coordination.",
+      "Can claim practical process documentation and better follow-through."
+    ].join("\n"),
+    claimsNotAllowed: [
+      "Do not claim direct revenue impact.",
+      "Do not claim headcount authority.",
+      "Do not claim ownership of the underlying customer platform."
+    ].join("\n")
+  };
+
+  function el(id) {
+    return document.getElementById(id);
+  }
+
+  function clean(value) {
+    return String(value || "").trim();
+  }
+
+  function lines(value) {
+    return String(value || "")
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(Boolean);
+  }
+
+  function slugify(value) {
+    return clean(value)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      || "case-study";
+  }
+
+  function collectData() {
+    const data = {};
+    fields.forEach(id => {
+      data[id] = el(id).value;
+    });
+    data.fileName = markdownFilename(data);
+    return data;
+  }
+
+  function applyData(data) {
+    fields.forEach(id => {
+      if (Object.prototype.hasOwnProperty.call(data, id)) {
+        el(id).value = data[id] || "";
+      } else {
+        el(id).value = "";
+      }
+    });
+    if (!clean(el("templateType").value)) el("templateType").value = "complex";
+    update();
+  }
+
+  function markdownFilename(data) {
+    return `case-study-${slugify(data.caseTitle || "proof-narrative")}.md`;
+  }
+
+  function bulletBlock(value, fallback) {
+    const items = lines(value);
+    if (!items.length) return `- ${fallback}`;
+    return items.map(item => `- ${item.replace(/^[-*]\s+/, "")}`).join("\n");
+  }
+
+  function paragraph(value, fallback) {
+    return clean(value) || fallback;
+  }
+
+  function optionSections(value) {
+    const items = lines(value);
+    if (!items.length) {
+      return [
+        "### Option 1 - Insert option",
+        "",
+        "- Pros: Insert",
+        "- Cons: Insert",
+        "",
+        "### Option 2 - Insert option",
+        "",
+        "- Pros: Insert",
+        "- Cons: Insert",
+        "",
+        "### Option 3 - Insert chosen option",
+        "",
+        "- Pros: Insert",
+        "- Cons/tradeoff: Insert"
+      ].join("\n");
+    }
+    return items.map((item, index) => {
+      const body = item.replace(/^Option\s+\d+\s*-\s*/i, "").trim();
+      const title = (body.split(/\bPros:|\bCons(?:\/tradeoff)?:/i)[0] || "Option")
+        .replace(/[.:;\s]+$/g, "")
+        .trim()
+        .slice(0, 80);
+      const pros = body.match(/\bPros:\s*([\s\S]*?)(?=\s+\bCons(?:\/tradeoff)?:|$)/i);
+      const cons = body.match(/\bCons(\/tradeoff)?:\s*([\s\S]*?)$/i);
+      const bullets = [];
+      if (pros && clean(pros[1])) bullets.push(`- Pros: ${clean(pros[1]).replace(/[.;\s]+$/g, "")}`);
+      if (cons && clean(cons[2])) bullets.push(`- ${cons[1] ? "Cons/tradeoff" : "Cons"}: ${clean(cons[2]).replace(/[.;\s]+$/g, "")}`);
+      if (!bullets.length) bullets.push(`- ${body}`);
+      return [`### Option ${index + 1} - ${title || "Option"}`, "", bullets.join("\n")].join("\n");
+    }).join("\n\n");
+  }
+
+  function buildComplexMarkdown(data) {
+    const title = paragraph(data.caseTitle, "Complex Operating Problem");
+    return [
+      `# Case Study - ${title}`,
+      "",
+      "Purpose: Use for a major project, program, transformation, delivery recovery, governance build, launch, or operational reset.",
+      "",
+      "## Usage gate",
+      "",
+      "Complete this only with real facts. Do not invent metrics. Mark estimates as estimates.",
+      "",
+      "## Purpose",
+      "",
+      `Use for: ${paragraph(data.purposeSignals, "Insert jobs or skills this case supports.")}`,
+      "",
+      "## Context",
+      "",
+      paragraph(data.context, "Insert organization, timeframe, business environment, and why the work mattered."),
+      "",
+      "## Stakes and constraints",
+      "",
+      bulletBlock(data.stakes, "Insert constraint or stake."),
+      "",
+      "## Problem",
+      "",
+      paragraph(data.problem, "Describe the operating problem. Separate symptoms from root cause."),
+      "",
+      "## Options considered",
+      "",
+      optionSections(data.options),
+      "",
+      "## Decision and rationale",
+      "",
+      paragraph(data.decision, "Explain the chosen path and why it was better than alternatives."),
+      "",
+      "## Execution",
+      "",
+      bulletBlock([data.yourRole, data.actions].filter(clean).join("\n"), "Insert what you personally did."),
+      "",
+      "## Outcomes",
+      "",
+      bulletBlock(data.outcomes, "Insert measured outcome."),
+      "",
+      "## What changed",
+      "",
+      paragraph(data.whatChanged, "Explain before/after in practical terms."),
+      "",
+      "## Why it mattered",
+      "",
+      paragraph(data.whyMattered, "Explain the business relevance."),
+      "",
+      "## Claims allowed",
+      "",
+      bulletBlock(data.claimsAllowed, "Insert claim the engine may use."),
+      "",
+      "## Claims not allowed",
+      "",
+      bulletBlock(data.claimsNotAllowed, "Insert claim that would overstate the evidence."),
+      ""
+    ].join("\n");
+  }
+
+  function buildCommercialMarkdown(data) {
+    const title = paragraph(data.caseTitle, "Commercial, Risk, or Scale Outcome");
+    return [
+      `# Case Study - ${title}`,
+      "",
+      "Purpose: Use for work involving revenue, cost, budget, customer impact, risk reduction, compliance, partner ecosystem, product/platform scale, or executive decision support.",
+      "",
+      "## Usage gate",
+      "",
+      "Use real figures only. If the number is directional, write `estimated` and explain the basis.",
+      "",
+      "## Purpose",
+      "",
+      `Use for: ${paragraph(data.purposeSignals, "Insert jobs or skills this case supports.")}`,
+      "",
+      "## Context",
+      "",
+      paragraph(data.context, "Insert organization, timeframe, operating environment, market condition, and financial or risk context."),
+      "",
+      "## Scale",
+      "",
+      bulletBlock(data.scale, "Revenue, budget, cost, portfolio, customer, user, supplier, platform, or risk scale: Insert."),
+      "",
+      "## Problem",
+      "",
+      paragraph(data.problem, "What was financially, commercially, or operationally at risk?"),
+      "",
+      "## Constraints",
+      "",
+      bulletBlock(data.stakes, "Insert constraint."),
+      "",
+      "## Your role",
+      "",
+      paragraph(data.yourRole, "Clarify actual ownership, authority, influence model, and limits."),
+      "",
+      "## Actions",
+      "",
+      bulletBlock(data.actions, "Insert action with mechanism."),
+      "",
+      "## Outcomes",
+      "",
+      bulletBlock(data.outcomes, "Insert measured outcome."),
+      "",
+      "## Evidence quality",
+      "",
+      bulletBlock(data.evidenceQuality, "Measured: Insert metrics with source."),
+      "",
+      "## Employer-facing summary",
+      "",
+      paragraph(data.employerSummary, "Insert 2-3 sentence version suitable for resume/cover letter interpretation."),
+      "",
+      "## Guardrails",
+      "",
+      bulletBlock(data.claimsNotAllowed, "Do not claim Insert unsupported direct ownership."),
+      ""
+    ].join("\n");
+  }
+
+  function buildMarkdown(data) {
+    const markdown = data.templateType === "commercial"
+      ? buildCommercialMarkdown(data)
+      : buildComplexMarkdown(data);
+    return markdown.replace(/\n{3,}/g, "\n\n").trim() + "\n";
+  }
+
+  function validateData(data) {
+    const issues = [];
+    if (!clean(data.caseTitle)) issues.push("Add a case study title.");
+    if (!clean(data.purposeSignals)) issues.push("Add the jobs or skills this story supports.");
+    if (!clean(data.context)) issues.push("Add the context: organization, timeframe, and why the work mattered.");
+    if (!lines(data.stakes).length) issues.push("Add at least one stake or constraint.");
+    if (!clean(data.problem)) issues.push("Add the problem and root cause.");
+    if (!clean(data.yourRole)) issues.push("Clarify your role and limits.");
+    if (!lines(data.actions).length) issues.push("Add at least one action you took.");
+    if (!lines(data.outcomes).length) issues.push("Add at least one outcome.");
+    if (!clean(data.outcomes).match(/\d|percent|fewer|more|reduced|increased|improved|faster|slower|clearer|larger|smaller/i)) {
+      issues.push("Try to quantify or qualify the outcome with a number, count, size, deadline, or clear before/after change.");
+    }
+    if (!lines(data.claimsAllowed).length) issues.push("Add at least one claim this story allows.");
+    if (!lines(data.claimsNotAllowed).length) issues.push("Add at least one thing not to overstate.");
+    if (data.templateType === "commercial" && !clean(data.scale)) issues.push("Add the size of the work: money, customers, people, requests, systems, or risk involved.");
+    return issues;
+  }
+
+  function renderValidation(issues) {
+    if (!issues.length) {
+      validation.className = "validation ok";
+      validation.textContent = "Looks ready for a clean case-study Markdown export.";
+      return;
+    }
+    validation.className = "validation";
+    validation.innerHTML = `<strong>Before export:</strong><ul>${issues.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function update() {
+    const data = collectData();
+    el("fileName").value = data.fileName;
+    preview.textContent = buildMarkdown(data);
+    renderValidation(validateData(data));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    status.textContent = `Preview refreshed ${new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}.`;
+  }
+
+  function downloadText(filename, text, type) {
+    const blob = new Blob([text], { type });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = filename;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  document.getElementById("refreshPreview").addEventListener("click", update);
+
+  document.getElementById("downloadMarkdown").addEventListener("click", () => {
+    const data = collectData();
+    downloadText(markdownFilename(data), buildMarkdown(data), "text/markdown;charset=utf-8");
+  });
+
+  document.getElementById("copyMarkdown").addEventListener("click", async () => {
+    const markdown = buildMarkdown(collectData());
+    await navigator.clipboard.writeText(markdown);
+    status.textContent = "Markdown copied.";
+  });
+
+  document.getElementById("downloadJson").addEventListener("click", () => {
+    const data = collectData();
+    const filename = `${slugify(data.caseTitle || "case-study")}-builder-data.json`;
+    downloadText(filename, JSON.stringify(data, null, 2), "application/json;charset=utf-8");
+  });
+
+  document.getElementById("importJson").addEventListener("change", event => {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        applyData(JSON.parse(reader.result));
+        status.textContent = "Builder data loaded.";
+      } catch (error) {
+        status.textContent = "Could not read that JSON file.";
+      }
+    };
+    reader.readAsText(file);
+    event.target.value = "";
+  });
+
+  document.getElementById("loadSample").addEventListener("click", () => {
+    applyData(sampleData);
+    status.textContent = "Sample loaded.";
+  });
+
+  document.getElementById("clearAll").addEventListener("click", () => {
+    localStorage.removeItem(STORAGE_KEY);
+    applyData({ templateType: "complex" });
+    status.textContent = "Form cleared.";
+  });
+
+  document.querySelectorAll("input, textarea, select").forEach(input => {
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+  });
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    try {
+      applyData(JSON.parse(saved));
+    } catch (error) {
+      applyData({ templateType: "complex" });
+    }
+  } else {
+    applyData({ templateType: "complex" });
+  }
+})();
+</script>
+</body>
+</html>

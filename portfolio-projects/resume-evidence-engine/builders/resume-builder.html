@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume Markdown Builder</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --ink: #1d2430;
+    --muted: #586474;
+    --line: #d8dee8;
+    --soft: #eef3f7;
+    --accent: #1f6f78;
+    --accent-ink: #ffffff;
+    --danger: #a43232;
+    --warn-bg: #fff7e8;
+    --warn-line: #f0c36d;
+    --ok: #276749;
+    --shadow: 0 10px 28px rgba(26, 37, 52, 0.08);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.45;
+  }
+  header {
+    padding: 22px clamp(16px, 3vw, 34px);
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .topbar {
+    max-width: 1480px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 750;
+  }
+  .lede {
+    margin: 4px 0 0;
+    color: var(--muted);
+    max-width: 760px;
+  }
+  .setup-note {
+    max-width: 1480px;
+    margin: 16px auto 0;
+    border: 1px solid #b8d7dd;
+    background: #edf7f8;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .setup-note strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+  .setup-note p {
+    margin: 6px 0 0;
+    max-width: 1120px;
+  }
+  code {
+    background: #dbe8eb;
+    border-radius: 4px;
+    padding: 1px 4px;
+  }
+  main {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 22px clamp(16px, 3vw, 34px) 40px;
+    display: grid;
+    grid-template-columns: minmax(360px, 0.95fr) minmax(420px, 1.05fr);
+    gap: 22px;
+  }
+  .workspace {
+    display: grid;
+    gap: 16px;
+    align-content: start;
+  }
+  section, .preview-shell {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  section {
+    padding: 18px;
+  }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  h3 {
+    margin: 0 0 10px;
+    font-size: 15px;
+  }
+  .hint {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .full { grid-column: 1 / -1; }
+  label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  input, textarea, select {
+    width: 100%;
+    border: 1px solid #c8d1dc;
+    border-radius: 7px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    padding: 9px 10px;
+  }
+  input[readonly] {
+    background: #eef3f7;
+    color: var(--muted);
+  }
+  textarea {
+    min-height: 92px;
+    resize: vertical;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: 2px solid rgba(31, 111, 120, 0.22);
+    border-color: var(--accent);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  button, .file-button {
+    border: 0;
+    border-radius: 7px;
+    padding: 9px 12px;
+    min-height: 38px;
+    font-weight: 700;
+    cursor: pointer;
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+  button.secondary, .file-button.secondary {
+    background: #3f4d5c;
+  }
+  button.ghost {
+    background: var(--soft);
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+  button.danger {
+    background: var(--danger);
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .file-button input {
+    display: none;
+  }
+  .item {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px;
+    background: #fbfcfe;
+    margin-top: 12px;
+  }
+  .item-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .item-title strong {
+    font-size: 14px;
+  }
+  .validation {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-line);
+    color: #664713;
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .validation.ok {
+    background: #edf7f0;
+    border-color: #94c7a3;
+    color: var(--ok);
+  }
+  .validation ul {
+    margin: 6px 0 0 20px;
+    padding: 0;
+  }
+  .preview-shell {
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 124px);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+  }
+  .preview-head {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+  }
+  .preview-head h2 {
+    font-size: 16px;
+  }
+  pre {
+    margin: 0;
+    padding: 18px;
+    overflow: auto;
+    background: #121821;
+    color: #eef3f8;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+  }
+  .status {
+    color: var(--muted);
+    font-size: 12px;
+    min-height: 18px;
+  }
+  .compact-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: end;
+  }
+  @media (max-width: 980px) {
+    header { position: static; }
+    main { grid-template-columns: 1fr; }
+    .preview-shell {
+      position: static;
+      max-height: none;
+      min-height: 420px;
+    }
+  }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .topbar, .section-head, .preview-head { align-items: stretch; flex-direction: column; }
+    button, .file-button { width: 100%; text-align: center; }
+    .actions { width: 100%; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <div>
+      <h1>Resume Markdown Builder</h1>
+      <p class="lede">Build a clean resume Markdown file for the Resume Evidence Engine. Everything runs in this page; no account, server, Git, Python, or install step.</p>
+    </div>
+    <div class="actions" aria-label="Page actions">
+      <button type="button" class="ghost" id="loadSample">Load sample</button>
+      <button type="button" class="secondary" id="downloadJson">Save builder data</button>
+      <label class="file-button secondary">Load builder data<input type="file" id="importJson" accept="application/json,.json"></label>
+    </div>
+  </div>
+  <div class="setup-note" role="note" aria-label="Required resume source files">
+    <strong>Use this builder to create resume source files for the Resume Evidence Engine.</strong>
+    <p>The engine requires <code>core-canonical-resume.md</code> at minimum. This is the factual master resume: work history, dates, titles, scope, skills, education, credentials, and evidence-backed achievements.</p>
+    <p>The engine performs better when you also create variant resumes, such as <code>variant-resume-template-1.md</code>, <code>variant-resume-template-2.md</code>, or role-family files like <code>variant-resume-facilities-maintenance.md</code>. Variants help the system match different job lanes without changing the truth source.</p>
+    <p>You can complete this builder yourself and download the Markdown file, or give your current resume and this builder page to Codex, ChatGPT, Claude, or a trusted teammate and ask them to generate the file using this builder as the template. Review the finished file for accuracy before using it.</p>
+    <p>Want a completed example first? Open <a href="../docs/sample-builder-outputs/sample-core-canonical-resume.md">sample core resume</a>, <a href="../docs/sample-builder-outputs/sample-variant-resume-customer-operations.md">sample variant resume</a>, or a paired <a href="../docs/sample-builder-outputs/sample-final-resume-customer-operations-coordinator.md">sample final resume Markdown</a> and <a href="../docs/sample-builder-outputs/sample-final-resume-customer-operations-coordinator.docx">rendered Word file</a>.</p>
+  </div>
+</header>
+
+<main>
+  <div class="workspace">
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>1. Resume Type</h2>
+          <p class="hint">Choose the resume source file to create. The system always starts with Markdown, then a capable agent can render that Markdown to DOCX.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div>
+          <label for="documentType">Resume file type</label>
+          <p class="hint">Core is the factual master resume. Variant is a reusable role-family resume. Final targeted resume is customized for one company and role.</p>
+          <select id="documentType">
+            <option value="core">Core canonical resume</option>
+            <option value="variant">Resume variant</option>
+            <option value="final">Final targeted resume</option>
+          </select>
+        </div>
+        <div>
+          <label for="variantName">Variant or target label</label>
+          <p class="hint">For variants, use a role family such as "facilities maintenance" or "customer service". For final resumes, use "company - role".</p>
+          <input id="variantName" placeholder="Facilities maintenance; customer service; Acme - Maintenance Technician">
+        </div>
+        <div class="full">
+          <label for="fileName">Generated download filename</label>
+          <input id="fileName" readonly aria-readonly="true">
+          <p class="hint">Automatically follows the project naming convention so the system can discover the file later.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>2. Header</h2>
+          <p class="hint">These values become the resume header. Use one clear line per field and include only contact details that should appear in the resume.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div>
+          <label for="candidateName">Candidate first and last name</label>
+          <p class="hint">Used as the main resume heading and in generated filenames.</p>
+          <input id="candidateName" placeholder="Jordan Lee">
+        </div>
+        <div>
+          <label for="headline">Optional target headline</label>
+          <p class="hint">A short role-positioning line, not a slogan. Example: Maintenance Technician.</p>
+          <input id="headline" placeholder="Maintenance Technician">
+        </div>
+        <div>
+          <label for="location">Location</label>
+          <p class="hint">City and state/region are usually enough. Example: City, State.</p>
+          <input id="location" placeholder="City, State">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <p class="hint">Use the address that should appear on employer-facing resumes.</p>
+          <input id="email" placeholder="sample.candidate@example.com">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <p class="hint">Optional. Leave blank if the resume should not include a phone number.</p>
+          <input id="phone" placeholder="555-555-5555">
+        </div>
+        <div>
+          <label for="linkedin">LinkedIn URL</label>
+          <p class="hint">Optional. Use the full profile URL so the Markdown link renders correctly.</p>
+          <input id="linkedin" placeholder="https://www.linkedin.com/in/samplecandidate">
+        </div>
+        <div class="full">
+          <label for="portfolio">Portfolio URL</label>
+          <p class="hint">Optional. Use only if there is a public portfolio or proof page you want employers to see.</p>
+          <input id="portfolio" placeholder="https://example.com/portfolio">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>3. Qualifications</h2>
+          <p class="hint">Write the evidence-backed scan summary. Enter one proof-oriented point per line; each line becomes one bullet unless paragraph mode is selected.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div>
+          <label for="summaryMode">Summary format</label>
+          <p class="hint">Bullets are the default for ATS-friendly resumes. Paragraphs are useful for shorter executive summaries.</p>
+          <select id="summaryMode">
+            <option value="bullets">Bullets</option>
+            <option value="paragraph">Paragraphs</option>
+          </select>
+        </div>
+        <div>
+          <label for="sectionName">Summary section name</label>
+          <p class="hint">Use the heading you want in the resume. Common values: Qualifications, Profile, Summary.</p>
+          <input id="sectionName" value="Qualifications">
+        </div>
+        <div class="full">
+          <label for="summary">Summary lines</label>
+          <textarea id="summary" placeholder="Maintenance worker with experience handling service requests, preventive maintenance, inspections, and basic repairs.&#10;Known for safe work habits, clear communication, and reliable follow-through."></textarea>
+        </div>
+        <div class="full">
+          <label for="capabilities">Capabilities line</label>
+          <textarea id="capabilities" placeholder="Preventive maintenance, work orders, basic plumbing, basic electrical, customer service, safety checks"></textarea>
+          <p class="hint">Optional. Use a comma-separated list of skills, tools, services, or work capabilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>4. Experience</h2>
+          <p class="hint">Each role needs a title, employer, dates, and at least one evidence-based bullet. Add one role at a time and keep claims factual.</p>
+        </div>
+        <button type="button" id="addExperience">Add role</button>
+      </div>
+      <div id="experienceList"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2>5. Education, Credentials, Skills</h2>
+          <p class="hint">One line becomes one bullet. Keep education, credentials, and skills truthful, current, and role-relevant.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="full">
+          <label for="education">Education</label>
+          <p class="hint">Enter one degree, diploma, program, apprenticeship, or relevant coursework item per line. Example: High school diploma or GED - Example School.</p>
+          <textarea id="education" placeholder="High school diploma or GED - Example School"></textarea>
+        </div>
+        <div class="full">
+          <label for="credentials">Credentials</label>
+          <p class="hint">Enter one certification, license, training program, or credential per line. Include only items you can verify.</p>
+          <textarea id="credentials" placeholder="OSHA 10-hour General Industry - Example Training Provider"></textarea>
+        </div>
+        <div class="full">
+          <label for="skills">Skills</label>
+          <p class="hint">Use concise skill clusters. Separate multiple entries with commas, or put one skill group per line.</p>
+          <textarea id="skills" placeholder="Basic plumbing, electrical, painting, drywall repair, preventive maintenance, customer service"></textarea>
+        </div>
+        <div class="full">
+          <label for="additional">Additional information</label>
+          <p class="hint">Optional. Add languages, publications, awards, volunteer work, or other relevant notes, one per line.</p>
+          <textarea id="additional" placeholder="Bilingual English/Spanish&#10;Volunteer board member - Local nonprofit"></textarea>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <aside class="preview-shell" aria-label="Markdown preview">
+    <div class="preview-head">
+      <div>
+        <h2>Markdown Preview</h2>
+        <div class="status" id="status">Autosaved in this browser.</div>
+      </div>
+      <div class="actions">
+        <button type="button" class="ghost" id="copyMarkdown">Copy Markdown</button>
+        <button type="button" id="downloadMarkdown">Download .md</button>
+        <button type="button" class="danger" id="clearAll">Clear</button>
+      </div>
+    </div>
+    <div>
+      <div id="validation" class="validation"></div>
+      <pre id="preview"></pre>
+    </div>
+  </aside>
+</main>
+
+<template id="experienceTemplate">
+  <div class="item experience-item">
+    <div class="item-title">
+      <strong class="item-label">Role</strong>
+      <button type="button" class="danger remove-item">Remove</button>
+    </div>
+    <div class="grid">
+      <div>
+        <label>Role title</label>
+        <p class="hint">Use the official title unless a truthful functional title is approved elsewhere.</p>
+        <input data-field="title" placeholder="Maintenance Technician">
+      </div>
+      <div>
+        <label>Employer</label>
+        <p class="hint">Use the real employer name that should appear on the resume.</p>
+        <input data-field="employer" placeholder="Company">
+      </div>
+      <div>
+        <label>Location</label>
+        <p class="hint">Use city/state, Remote, or Hybrid if that is how the role should be shown.</p>
+        <input data-field="location" placeholder="City, State or Remote">
+      </div>
+      <div>
+        <label>Dates</label>
+        <p class="hint">Use a consistent date style. Example: Jan 2022 to Present.</p>
+        <input data-field="dates" placeholder="Month Year to Present">
+      </div>
+      <div class="full">
+        <label>Optional role context</label>
+        <p class="hint">One short line that explains scope when the title alone is not enough.</p>
+        <textarea data-field="context" placeholder="Short context line if it improves scan value"></textarea>
+      </div>
+      <div class="full">
+        <label>Achievement bullets</label>
+        <p class="hint">Enter one bullet per line. Lead with the operating contribution, then add scope, evidence, or outcome.</p>
+        <textarea data-field="bullets" placeholder="Achievement anchor - Evidence-supported result with scope and outcome.&#10;Achievement anchor - Another evidence-supported result."></textarea>
+        <p class="hint">Recommended shape: `Achievement anchor - evidence, scope, and outcome.`</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+(function () {
+  "use strict";
+
+  const STORAGE_KEY = "resume-evidence-engine.resume-builder.v2";
+  const preview = document.getElementById("preview");
+  const validation = document.getElementById("validation");
+  const status = document.getElementById("status");
+  const experienceList = document.getElementById("experienceList");
+
+  const fields = [
+    "documentType", "variantName", "fileName", "candidateName", "headline",
+    "location", "email", "phone", "linkedin", "portfolio", "summaryMode",
+    "sectionName", "summary", "capabilities", "education", "credentials",
+    "skills", "additional"
+  ];
+
+  const sampleData = {
+    documentType: "variant",
+    variantName: "Program operations",
+    fileName: "variant-resume-program-operations.md",
+    candidateName: "Sample Candidate",
+    headline: "Program Operations Leader",
+    location: "San Diego, CA",
+    email: "sample.candidate@example.com",
+    phone: "555-555-0144",
+    linkedin: "https://www.linkedin.com/in/samplecandidate",
+    portfolio: "https://example.com/portfolio",
+    summaryMode: "bullets",
+    sectionName: "Qualifications",
+    summary: [
+      "Operations and systems leader with experience improving intake, governance, and cross-functional delivery for growing teams.",
+      "Builds clear documentation, repeatable workflows, and practical reporting that helps executives make faster decisions."
+    ].join("\n"),
+    capabilities: "Portfolio governance, operating cadence, process documentation, stakeholder management, business reporting",
+    experience: [
+      {
+        title: "Program Operations Manager",
+        employer: "Northstar Systems",
+        location: "San Diego, CA",
+        dates: "2022 to Present",
+        context: "",
+        bullets: [
+          "Operating cadence - Led a cross-functional rhythm for product, customer success, and finance stakeholders across weekly planning and monthly business reviews.",
+          "Portfolio visibility - Built a lightweight dashboard that improved project visibility and reduced duplicate status requests from leadership.",
+          "Intake discipline - Standardized intake, prioritization, and delivery notes so teams could compare work by value, risk, and readiness."
+        ].join("\n")
+      },
+      {
+        title: "Business Systems Lead",
+        employer: "Harbor Analytics",
+        location: "Remote",
+        dates: "2019 to 2022",
+        context: "",
+        bullets: [
+          "Renewal handoffs - Partnered with sales and operations leaders to redesign renewal handoffs, improving data completeness and reducing manual follow-up.",
+          "Process clarity - Documented process changes, role ownership, and exception paths in plain-language operating guides.",
+          "Workflow delivery - Coordinated implementation across CRM, reporting, and support workflows without adding unnecessary process overhead."
+        ].join("\n")
+      }
+    ],
+    education: "Bachelor of Science, Business Administration - Example State University - 2018",
+    credentials: "Certificate in Project Leadership - Example Institute",
+    skills: "Portfolio governance, CRM workflows, business reporting, requirements translation, executive-ready communications",
+    additional: ""
+  };
+
+  function el(id) {
+    return document.getElementById(id);
+  }
+
+  function lines(value) {
+    return String(value || "")
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(Boolean);
+  }
+
+  function clean(value) {
+    return String(value || "").trim();
+  }
+
+  function slugify(value) {
+    return clean(value)
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      || "resume";
+  }
+
+  function link(label, url) {
+    const safeLabel = clean(label);
+    const safeUrl = clean(url);
+    return safeLabel && safeUrl ? `[${safeLabel}](${safeUrl})` : safeLabel || safeUrl;
+  }
+
+  function addExperience(data) {
+    const template = document.getElementById("experienceTemplate");
+    const node = template.content.firstElementChild.cloneNode(true);
+    experienceList.appendChild(node);
+    bindItem(node);
+    setItemData(node, data || {});
+    updateItemLabels();
+    update();
+  }
+
+  function bindItem(node) {
+    node.querySelector(".remove-item").addEventListener("click", () => {
+      node.remove();
+      updateItemLabels();
+      update();
+    });
+    node.querySelectorAll("input, textarea").forEach(input => {
+      input.addEventListener("input", update);
+    });
+  }
+
+  function setItemData(node, data) {
+    node.querySelectorAll("[data-field]").forEach(input => {
+      input.value = data[input.dataset.field] || "";
+    });
+  }
+
+  function getItemData(node) {
+    const data = {};
+    node.querySelectorAll("[data-field]").forEach(input => {
+      data[input.dataset.field] = input.value;
+    });
+    return data;
+  }
+
+  function updateItemLabels() {
+    experienceList.querySelectorAll(".experience-item").forEach((node, index) => {
+      const title = clean(node.querySelector('[data-field="title"]').value) || "Role";
+      node.querySelector(".item-label").textContent = `${index + 1}. ${title}`;
+    });
+  }
+
+  function collectData() {
+    const data = {};
+    fields.forEach(id => {
+      data[id] = el(id).value;
+    });
+    data.experience = Array.from(experienceList.querySelectorAll(".experience-item")).map(getItemData);
+    return data;
+  }
+
+  function applyData(data) {
+    fields.forEach(id => {
+      if (Object.prototype.hasOwnProperty.call(data, id)) {
+        el(id).value = data[id] || "";
+      } else {
+        el(id).value = "";
+      }
+    });
+    if (!clean(el("documentType").value)) el("documentType").value = "core";
+    if (!clean(el("summaryMode").value)) el("summaryMode").value = "bullets";
+    if (!clean(el("sectionName").value)) el("sectionName").value = "Qualifications";
+    experienceList.innerHTML = "";
+    (data.experience || []).forEach(addExperience);
+    if (!experienceList.children.length) addExperience();
+    updateItemLabels();
+    update();
+  }
+
+  function hasResumeContent(data) {
+    return fields.some(id => id !== "documentType" && id !== "summaryMode" && id !== "sectionName" && clean(data[id])) ||
+      (data.experience || []).some(role => Object.values(role).some(clean));
+  }
+
+  function buildMarkdown(data) {
+    const parts = [];
+    if (!hasResumeContent(data)) return "";
+    const name = clean(data.candidateName) || "Candidate Name";
+    const sectionName = clean(data.sectionName) || "Qualifications";
+    const contact = [];
+    if (clean(data.location)) contact.push(clean(data.location));
+    if (clean(data.email)) contact.push(clean(data.email));
+    if (clean(data.phone)) contact.push(clean(data.phone));
+    if (clean(data.linkedin)) contact.push(link("LinkedIn", data.linkedin));
+    if (clean(data.portfolio)) contact.push(link("Portfolio", data.portfolio));
+
+    parts.push(`# ${name}`);
+    if (contact.length) parts.push(contact.join(" | "));
+    if (clean(data.headline)) parts.push("", clean(data.headline));
+
+    const summaryLines = lines(data.summary);
+    if (summaryLines.length || clean(data.capabilities)) {
+      parts.push("", `# ${sectionName}`);
+      if (data.summaryMode === "paragraph") {
+        summaryLines.forEach(line => parts.push("", line));
+      } else {
+        summaryLines.forEach(line => parts.push(`- ${line.replace(/^[-*]\s+/, "")}`));
+      }
+      if (clean(data.capabilities)) {
+        parts.push("", "Capabilities");
+        parts.push(clean(data.capabilities));
+      }
+    }
+
+    const exp = (data.experience || []).filter(role => clean(role.title) || clean(role.employer) || clean(role.bullets));
+    if (exp.length) {
+      parts.push("", "# Experience");
+      exp.forEach(role => {
+        const headingBits = [clean(role.title), clean(role.employer), clean(role.location), clean(role.dates)].filter(Boolean);
+        parts.push("", `## ${headingBits.join(" | ") || "Role Title | Employer | Dates"}`);
+        if (clean(role.context)) parts.push(clean(role.context));
+        lines(role.bullets).forEach(line => {
+          parts.push(`- ${line.replace(/^[-*]\s+/, "")}`);
+        });
+      });
+    }
+
+    const education = lines(data.education);
+    const credentials = lines(data.credentials);
+    if (education.length || credentials.length) {
+      parts.push("", "# Education and Credentials");
+      education.forEach(line => parts.push(`- ${line.replace(/^[-*]\s+/, "")}`));
+      credentials.forEach(line => parts.push(`- ${line.replace(/^[-*]\s+/, "")}`));
+    }
+
+    const skills = lines(data.skills);
+    if (skills.length) {
+      parts.push("", "# Skills");
+      skills.forEach(line => parts.push(`- ${line.replace(/^[-*]\s+/, "")}`));
+    }
+
+    const additional = lines(data.additional);
+    if (additional.length) {
+      parts.push("", "# Additional Information");
+      additional.forEach(line => parts.push(`- ${line.replace(/^[-*]\s+/, "")}`));
+    }
+
+    return parts.join("\n").replace(/\n{3,}/g, "\n\n").trim() + "\n";
+  }
+
+  function validateData(data) {
+    const issues = [];
+    if (!clean(data.candidateName)) issues.push("Add the candidate name.");
+    if (!clean(data.email) && !clean(data.phone) && !clean(data.linkedin)) {
+      issues.push("Add at least one contact method.");
+    }
+    if (!lines(data.summary).length) issues.push("Add at least one qualifications line.");
+
+    const exp = data.experience || [];
+    if (!exp.some(role => clean(role.title) && clean(role.employer) && lines(role.bullets).length)) {
+      issues.push("Add at least one experience role with title, employer, and bullets.");
+    }
+    exp.forEach((role, index) => {
+      const hasAny = clean(role.title) || clean(role.employer) || clean(role.location) || clean(role.dates) || clean(role.bullets);
+      if (!hasAny) return;
+      if (!clean(role.title)) issues.push(`Role ${index + 1}: add a role title.`);
+      if (!clean(role.employer)) issues.push(`Role ${index + 1}: add an employer.`);
+      if (!clean(role.dates)) issues.push(`Role ${index + 1}: add dates.`);
+      if (!lines(role.bullets).length) issues.push(`Role ${index + 1}: add at least one achievement bullet.`);
+    });
+    return issues;
+  }
+
+  function renderValidation(issues) {
+    if (!issues.length) {
+      validation.className = "validation ok";
+      validation.textContent = "Looks ready for a clean Markdown export.";
+      return;
+    }
+    validation.className = "validation";
+    validation.innerHTML = `<strong>Before export:</strong><ul>${issues.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function update() {
+    updateItemLabels();
+    const data = collectData();
+    const filename = markdownFilename(data);
+    el("fileName").value = filename;
+    data.fileName = filename;
+    const markdown = buildMarkdown(data);
+    preview.textContent = markdown;
+    renderValidation(validateData(data));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    status.textContent = `Autosaved ${new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })}.`;
+  }
+
+  function downloadText(filename, text, type) {
+    const blob = new Blob([text], { type });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = filename;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function markdownFilename(data) {
+    const base = slugify(data.candidateName || "candidate");
+    const label = slugify(data.variantName || data.documentType || "resume");
+    if (data.documentType === "core") return "core-canonical-resume.md";
+    if (data.documentType === "variant") return `variant-resume-${label}.md`;
+    return `final-resume-${base}-${label}.md`;
+  }
+
+  document.getElementById("addExperience").addEventListener("click", () => addExperience());
+
+  document.getElementById("downloadMarkdown").addEventListener("click", () => {
+    const data = collectData();
+    downloadText(markdownFilename(data), buildMarkdown(data), "text/markdown;charset=utf-8");
+  });
+
+  document.getElementById("copyMarkdown").addEventListener("click", async () => {
+    const markdown = buildMarkdown(collectData());
+    await navigator.clipboard.writeText(markdown);
+    status.textContent = "Markdown copied.";
+  });
+
+  document.getElementById("downloadJson").addEventListener("click", () => {
+    const data = collectData();
+    const filename = `${slugify(data.candidateName || "candidate")}-resume-builder-data.json`;
+    downloadText(filename, JSON.stringify(data, null, 2), "application/json;charset=utf-8");
+  });
+
+  document.getElementById("importJson").addEventListener("change", event => {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        applyData(JSON.parse(reader.result));
+        status.textContent = "Builder data loaded.";
+      } catch (error) {
+        status.textContent = "Could not read that JSON file.";
+      }
+    };
+    reader.readAsText(file);
+    event.target.value = "";
+  });
+
+  document.getElementById("loadSample").addEventListener("click", () => {
+    applyData(sampleData);
+    status.textContent = "Sample loaded.";
+  });
+
+  document.getElementById("clearAll").addEventListener("click", () => {
+    localStorage.removeItem(STORAGE_KEY);
+    applyData({ summaryMode: "bullets", sectionName: "Qualifications", experience: [{}] });
+    status.textContent = "Form cleared.";
+  });
+
+  document.querySelectorAll("input, textarea, select").forEach(input => {
+    input.addEventListener("input", update);
+    input.addEventListener("change", update);
+  });
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    try {
+      applyData(JSON.parse(saved));
+    } catch (error) {
+      applyData({ summaryMode: "bullets", sectionName: "Qualifications", experience: [{}] });
+    }
+  } else {
+    applyData({ summaryMode: "bullets", sectionName: "Qualifications", experience: [{}] });
+  }
+})();
+</script>
+</body>
+</html>
