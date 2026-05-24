@@ -2,7 +2,7 @@
 
 I build operating systems for complex work: portfolio governance, executive cadence, delivery readiness, and practical AI-enabled workflows.
 
-My background is project, program, portfolio, and operations leadership across technology, revenue systems, partner ecosystems, launch readiness, compliance, and infrastructure delivery. I am strongest in environments where the work is visible but not yet governable: too many initiatives, unclear ownership, inconsistent intake, competing executive priorities, or delivery risk that only shows up after commitments have already been made.
+My background is portfolio, program, project, and operations leadership across technology, revenue systems, partner ecosystems, launch readiness, compliance, and infrastructure delivery. I am usually brought in to help fix environments where the work is visible but not yet governable: too many initiatives, unclear ownership, inconsistent intake, competing executive priorities, or delivery risk that only shows up after commitments have already been made.
 
 This GitHub profile is a public portfolio space for examples of how I structure work, not a software engineering portfolio. The artifacts here will focus on project-management systems, PMO tools, operating models, templates, and sanitized workflow examples.
 
@@ -34,15 +34,15 @@ I am building this space around public-safe examples such as:
 - AI-assisted project documentation workflow
 - Job-search and career-operations workflow architecture
 
-## Featured Portfolio Project
+## Featured Portfolio Projects
 
-- [Resume Evidence Engine](portfolio-projects/resume-evidence-engine/) - an evidence-bound job-search workflow for agent-assisted role scoring, resume drafting, cover letters, proof narratives, local browser builders, and Markdown-to-DOCX handoff. This project demonstrates how I structure practical AI workflows with source-of-truth files, guardrails, reusable templates, fictional sample outputs, and human review.
+- [Resume Evidence Engine](portfolio-projects/resume-evidence-engine/) - an evidence-bound job-search workflow for agent-assisted role scoring, resume drafting, cover letters, proof narratives, local browser configuration file builders, and Markdown-to-DOCX handoff. This project demonstrates how I structure practical AI workflows with source-of-truth files, guardrails, reusable templates, fictional sample outputs, and human review.
 
 ## How I Work
 
 - Start with the operating problem, not the template.
 - Make ownership, constraints, decisions, and tradeoffs visible.
-- Build enough process to create trust, then keep it usable.
+- Build enough process to create trust, then keep it usable prioritizing signal over noise, momentum over red tape.
 - Treat AI as leverage for structure, synthesis, and QA, not as a substitute for judgment.
 - Keep the final output readable for executives, useful for practitioners, and honest about risk.
 
