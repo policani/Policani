@@ -34,6 +34,10 @@ I am building this space around public-safe examples such as:
 - AI-assisted project documentation workflow
 - Job-search and career-operations workflow architecture
 
+## Featured Portfolio Project
+
+- [Resume Evidence Engine](portfolio-projects/resume-evidence-engine/) - an evidence-bound job-search workflow for agent-assisted role scoring, resume drafting, cover letters, proof narratives, local browser builders, and Markdown-to-DOCX handoff. This project demonstrates how I structure practical AI workflows with source-of-truth files, guardrails, reusable templates, fictional sample outputs, and human review.
+
 ## How I Work
 
 - Start with the operating problem, not the template.

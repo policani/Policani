@@ -4,6 +4,19 @@ Resume Evidence Engine is a portable, evidence-bound job-search starter kit for 
 
 The project is intentionally blank except for templates and fictional samples. It does not contain a user's private job history, credentials, preferences, references, or proof narratives.
 
+## Portfolio Value
+
+This project is part career tool and part workflow architecture sample. It demonstrates:
+
+- Evidence-bound resume and cover-letter drafting.
+- Agent-readable instructions and guardrails.
+- Local browser builders for non-technical users.
+- Reusable templates for core resumes, variant resumes, and proof narratives.
+- Markdown-to-DOCX handoff with a bundled renderer and Word reference template.
+- Public-safe sample outputs that show the workflow without exposing private career material.
+
+Search terms this project supports: resume evidence engine, AI resume workflow, job-search workflow, resume builder, cover letter builder, proof narratives, evidence map, job description scoring, ATS-friendly Markdown resume, Markdown to DOCX, Codex career workflow, agent-assisted documentation, portfolio project.
+
 ## First-time user promise
 
 Users should not need to install Git, Python, LibreOffice, PDF tools, or any local developer stack to get value from this project.
