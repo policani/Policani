@@ -7,3 +7,4 @@ Each project is based on personal tools I use every day, scrubbed of private emp
 ## Projects
 
 - `resume-evidence-engine` - Evidence-bound job-search workflow for agent-assisted scoring, resume drafting, cover letters, proof narratives, and Markdown-to-DOCX handoff
+- `job-search-workbench` - Local-first job-search workbench for scanning public employer job boards, filtering roles, reviewing source health, and exporting a job-seeker review list
