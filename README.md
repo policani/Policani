@@ -1,4 +1,4 @@
-# Marc Policani
+# Marco Policani
 
 I build operating systems for complex work: portfolio governance, executive cadence, delivery readiness, and practical AI-enabled workflows.
 
