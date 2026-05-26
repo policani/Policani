@@ -8,3 +8,4 @@ Each project is based on personal tools I use every day, scrubbed of private emp
 
 - `resume-evidence-engine` - Evidence-bound job-search workflow for agent-assisted scoring, resume drafting, cover letters, proof narratives, and Markdown-to-DOCX handoff
 - `job-search-workbench` - Local-first job-search workbench for scanning public employer job boards, filtering roles, reviewing source health, and exporting a job-seeker review list
+- `voicecheck` - Agent-readable prose QA toolkit for finding AI-shaped writing patterns and rewriting drafts into clearer, more specific human prose
