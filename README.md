@@ -1,6 +1,6 @@
 # Marco Policani
 
-I build operating systems for complex work: portfolio governance, executive cadence, delivery readiness, and practical AI-enabled workflows.
+I build PMOs, program frameworks, and business operating systems for complex work: portfolio governance, executive cadence, delivery readiness, and practical AI-enabled workflows.
 
 My background is portfolio, program, project, and operations leadership across technology, revenue systems, partner ecosystems, launch readiness, compliance, and infrastructure delivery. I am usually brought in to help fix environments where the work is visible but not yet governable: too many initiatives, unclear ownership, inconsistent intake, competing executive priorities, or delivery risk that only shows up after commitments have already been made.
 
