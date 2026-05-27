@@ -54,12 +54,12 @@ I am building this space around public-safe examples such as:
 - The workflow helps stakeholders define scoring criteria, weights, governance cadence, budget and capacity constraints, mandatory-versus-discretionary work, portfolio KPIs, and executive decision views.
 - It demonstrates how AI can improve portfolio prioritization, scenario review, and decision readiness without turning funding, sequencing, or tradeoff decisions over to an autonomous tool.
 
+## Featured Personal Projects
+
 [AI-Prose-Pattern-Detector](https://github.com/policani/Policani/tree/main/portfolio-projects/ai-prose-pattern-detector)
 
 - A prose QA toolkit for finding AI-shaped writing patterns, condensed expert language, formulaic contrast, and generic business prose.
 - It demonstrates agent-readable quality gates, centralized settings, reusable rubrics, and human-in-the-loop editing.
-
-## Featured Job Search Projects
 
 [Job-Search-Workbench](https://github.com/policani/Policani/tree/main/portfolio-projects/job-search-workbench)
 
