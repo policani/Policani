@@ -1,0 +1,4 @@
+risk,likelihood,impact,owner,notes
+Supervisor adoption risk,Medium,High,Regional service directors,Readiness gates may be bypassed under schedule pressure
+Data quality risk,Medium,High,IT applications lead,Inventory and work-order data may require cleanup before automated flags
+Pilot representativeness risk,Medium,Medium,VP Operations,Regions may not generalize to national rollout

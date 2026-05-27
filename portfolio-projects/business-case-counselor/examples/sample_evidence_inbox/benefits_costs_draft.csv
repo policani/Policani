@@ -1,0 +1,5 @@
+item,type,value,basis
+Reduced repeat visits,Hard,$920000,Assumes 40 percent reduction in addressable repeat truck rolls
+Reduced overtime and expedited parts,Hard,$480000,Assumes fewer late schedule changes
+Recovered appointment capacity,Hard,$620000,Assumes recovered capacity supports same-week appointments
+Training and change management,Cost,$90000,One-time pilot support
