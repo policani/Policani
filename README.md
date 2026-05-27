@@ -9,30 +9,32 @@ This GitHub profile is a public portfolio space for examples of how I structure 
 ## Core Lanes
 
 - Enterprise PMO, EPMO, portfolio governance, and AI value realization
-- Executive operating cadence and decision support
-- Intake, prioritization, sequencing, and capacity visibility
-- AI resource allocation, workflow economics, and measureable work reduction
+- Executive operating cadence, tradeoff review, and decision support
+- Intake, prioritization, scoring, sequencing, and capacity visibility
+- AI resource allocation, workflow economics, and measurable work reduction
 - Revenue technology, finance systems, and release-readiness governance
 - Partner ecosystem, GTM, launch, and field-readiness operations
-- AI-assisted project workflows with human review and evidence controls
+- AI-assisted project and portfolio workflows with human review and evidence controls
 
 ## Evidence-Backed Themes
 
 - Rebuilt portfolio visibility across large initiative sets so leaders could separate active work, stalled demand, readiness gaps, and real capacity constraints.
 - Designed governance rhythms for executive sponsors across CTO, CIO, CFO, COO, CMO, and Senior Director environments.
+- Built portfolio decision-support models that make prioritization criteria, ownership, risks, dependencies, tradeoffs, and decision rights easier to inspect.
 - Built operating models for partner programs, provider networks, launch evidence, pre-release pilots, and customer-facing readiness.
-- Used practical AI to improve portfolio hygiene, documentation quality, dependency review, meeting intelligence, content sourcing, and workflow consistency without handing off accountability to the tool.
+- Used practical AI to improve portfolio hygiene, documentation quality, dependency review, meeting intelligence, content sourcing, scoring consistency, and workflow discipline without handing accountability to the tool.
 - Turned messy delivery environments into clearer systems of record, ownership, decision cadence, and follow-through.
 
 ## Portfolio Direction
 
 I am building this space around public-safe examples such as:
 
-- PMO intake and prioritization models
+- PMO intake, scoring, prioritization, and sequencing models
+- Portfolio scoring matrices and executive decision-support briefs
 - Launch readiness and executive status frameworks
 - RAID and decision-log templates
 - Portfolio signal-quality checklists
-- AI-assisted project documentation workflows
+- AI-assisted project and portfolio documentation workflows
 - Job-search and career-operations workflow architecture
 
 ## Featured Management Projects
