@@ -43,6 +43,11 @@ I am building this space around public-safe examples such as:
 - It interviews the user, ingests supporting artifacts, challenges weak problem framing, strengthens incomplete ideas, tests assumptions through a critical review council, and generates structured Markdown, richly formatted DOCX, and HTML outputs.
 - It demonstrates how practical AI can improve business decision quality without replacing human judgment, sponsor accountability, financial scrutiny, or governance discipline.
 
+[Project Charter Initiation Agent](https://github.com/policani/Policani/tree/main/portfolio-projects/project-charter-initiation-agent) 
+
+- a PMBOK® Guide-aligned, agent-assisted project initiation system for developing sponsor-ready project charters from business cases, notes, spreadsheets, project plans, stakeholder inputs, and source artifacts.
+- The workflow acts like a senior initiation and governance advisor: it challenges vague scope, clarifies ownership and decision rights, separates objectives from deliverables, surfaces assumptions, risks, dependencies, and open decisions, and produces polished Markdown, HTML, and DOCX outputs ready for review.
+
 [ai-prose-pattern-detector](https://github.com/policani/Policani/tree/main/portfolio-projects/ai-prose-pattern-detector)
 
 - A prose QA toolkit for finding AI-shaped writing patterns, condensed expert language, formulaic contrast, and generic business prose.
