@@ -7,6 +7,7 @@ Each project is based on personal tools I use every day, scrubbed of private emp
 ## Projects
 
 - `business-case-counselor` - Agent-assisted business case development system for interviewing stakeholders, ingesting source artifacts, challenging weak problem framing, applying audience-aware review, maturing early ideas into decision-ready cases, and producing Markdown, DOCX, or HTML outputs.
+- `project-charter-initiation-agent` - PMBOK® Guide-aligned project initiation system for turning approved business cases, early project ideas, notes, spreadsheets, plans, stakeholder inputs, and source artifacts into sponsor-ready project charters. The workflow challenges vague scope, clarifies ownership and decision rights, separates objectives from deliverables, surfaces assumptions, risks, dependencies, and open decisions, and produces Markdown, HTML, and DOCX outputs for governance review.
 - `ai-prose-pattern-detector` - Agent-readable prose QA toolkit for finding AI-shaped writing patterns and rewriting drafts into clearer, more specific human prose
 - `job-search-workbench` - Local-first job-search workbench for scanning public employer job boards, filtering roles, reviewing source health, and exporting a job-seeker review list
 - `resume-evidence-engine` - Evidence-bound job-search workflow for agent-assisted scoring, resume drafting, cover letters, proof narratives, and Markdown-to-DOCX handoff
