@@ -35,7 +35,7 @@ I am building this space around public-safe examples such as:
 - AI-assisted project documentation workflows
 - Job-search and career-operations workflow architecture
 
-## Featured Portfolio Projects
+## Featured Management Projects
 
 [business-case-counselor](https://github.com/policani/Policani/tree/main/portfolio-projects/business-case-counselor)
 
@@ -48,10 +48,18 @@ I am building this space around public-safe examples such as:
 - A PMBOK® Guide-aligned, agent-assisted project initiation system for developing sponsor-ready project charters from business cases, notes, spreadsheets, project plans, stakeholder inputs, and source artifacts.
 - The workflow acts like a senior initiation and governance advisor: it challenges vague scope, clarifies ownership and decision rights, separates objectives from deliverables, surfaces assumptions, risks, dependencies, and open decisions, and produces polished Markdown, HTML, and DOCX outputs ready for review.
 
+[Portfolio Prioritization Scoring Agent](https://github.com/policani/Policani/tree/main/portfolio-projects/portfolio-prioritization-scoring-agent)
+
+- A human-governed, AI-assisted portfolio decision-support system for evaluating approved projects and programs through transparent weighted scoring, portfolio metadata, strategic themes, constraints, risks, dependencies, and ownership.
+- The workflow helps stakeholders define scoring criteria, weights, governance cadence, budget and capacity constraints, mandatory-versus-discretionary work, portfolio KPIs, and executive decision views.
+- It demonstrates how AI can improve portfolio prioritization, scenario review, and decision readiness without turning funding, sequencing, or tradeoff decisions over to an autonomous tool.
+
 [AI-Prose-Pattern-Detector](https://github.com/policani/Policani/tree/main/portfolio-projects/ai-prose-pattern-detector)
 
 - A prose QA toolkit for finding AI-shaped writing patterns, condensed expert language, formulaic contrast, and generic business prose.
 - It demonstrates agent-readable quality gates, centralized settings, reusable rubrics, and human-in-the-loop editing.
+
+## Featured Job Search Projects
 
 [Job-Search-Workbench](https://github.com/policani/Policani/tree/main/portfolio-projects/job-search-workbench)
 
