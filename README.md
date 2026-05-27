@@ -37,7 +37,7 @@ I am building this space around public-safe examples such as:
 
 ## Featured Management Projects
 
-[business-case-counselor](https://github.com/policani/Policani/tree/main/portfolio-projects/business-case-counselor)
+[Business-Case-Counselor](https://github.com/policani/Policani/tree/main/portfolio-projects/business-case-counselor)
 
 - An agent-assisted business case development system for turning early ideas, notes, spreadsheets, project plans, and source documents into decision-ready business cases.
 - It interviews the user, ingests supporting artifacts, challenges weak problem framing, strengthens incomplete ideas, tests assumptions through a critical review council, and generates structured Markdown, richly formatted DOCX, and HTML outputs.
