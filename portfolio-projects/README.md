@@ -1,6 +1,6 @@
 # Portfolio Projects
 
-This folder contains examples of my technical management work.
+This folder contains examples of how I structure business consulting, technical management, and personal AI-assisted operating workflows.
 
 Each project is based on personal tools I use every day, scrubbed of private employer, client, financial, security, and personal details before publishing.
 
