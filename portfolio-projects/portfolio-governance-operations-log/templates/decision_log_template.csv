@@ -1,0 +1,2 @@
+decision_id,date,initiative,decision,decision_owner,status,notes
+DEC-001,2026-05-20,Example Initiative,Decision text explicitly provided by user.,Sponsor,Proposed,Do not mark as approved unless provided.

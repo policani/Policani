@@ -1,0 +1,4 @@
+event_id,date,time,meeting,audience,status,notes
+CAL-001,2026-05-22,10:00,Weekly portfolio governance,Sponsors and initiative owners,Rescheduled,Moved to 2026-05-23
+CAL-002,2026-05-23,10:00,Weekly portfolio governance,Sponsors and initiative owners,Scheduled,Decision list added
+CAL-003,2026-05-24,13:00,Portal / Data Platform dependency working session,Alex Rivera; Priya Shah; Noah Grant; Casey Morgan,Proposed,Needs scheduling confirmation
