@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Artifact Ingestion And Privacy Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root { --fg:#1f2937; --muted:#4b5563; --line:#d1d5db; --soft:#f9fafb; --accent:#374151; }
+body { font-family: Arial, Helvetica, sans-serif; color: var(--fg); line-height: 1.55; margin: 0; background: #fff; }
+main { max-width: 960px; margin: 0 auto; padding: 40px 28px 60px; }
+h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+h2 { margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1.2rem; }
+h3 { margin-top: 1.4rem; }
+p { margin: 0.6rem 0; }
+ul { padding-left: 1.4rem; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+th, td { border: 1px solid var(--line); padding: 0.65rem; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+.callout { background: var(--soft); border-left: 4px solid var(--accent); padding: 1rem; margin: 1rem 0; }
+.example { background: #f3f4f6; padding: 0.85rem; border-radius: 8px; }
+code { background: #f3f4f6; padding: 0.1rem 0.25rem; border-radius: 4px; }
+footer { margin-top: 2rem; color: var(--muted); font-size: 0.9rem; }
+</style>
+
+</head>
+<body>
+<main>
+<h1>Artifact Ingestion And Privacy Guide</h1>
+
+<p>PMO notes often contain sensitive business context. Treat every source artifact as potentially confidential until reviewed.</p>
+<h2>Safe ingestion practices</h2>
+<ul><li>Use synthetic data in public repositories.</li><li>Redact customer names, employee names, financials, security details, legal matters, and proprietary plans.</li><li>Do not paste credentials, incident reports, contracts, or private HR content into unapproved systems.</li><li>Store only what is needed for governance output.</li></ul>
+<h2>Public-safe replacement pattern</h2>
+<table><tr><th>Private value</th><th>Public-safe replacement</th></tr>
+<tr><td>Real customer name</td><td>Customer A</td></tr>
+<tr><td>Actual budget</td><td>Budget impact to be confirmed</td></tr>
+<tr><td>Named employee</td><td>Program owner</td></tr>
+<tr><td>Specific incident</td><td>Operational issue</td></tr></table>
+
+<footer>Portfolio Governance Operations Log — synthetic, public-safe guidance. Human owners retain decision authority.</footer>
+</main>
+</body>
+</html>

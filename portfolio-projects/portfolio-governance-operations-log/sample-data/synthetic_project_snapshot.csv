@@ -1,0 +1,5 @@
+initiative,sponsor,initiative_owner,status,next_milestone,milestone_date,key_dependency,governance_note
+Regulatory Reporting Remediation,Morgan Lee,Riley Chen,Yellow,Compliance checkpoint readiness review,2026-06-06,Data validation input,Sponsor wants deadline confidence
+Customer Portal Modernization,Morgan Lee,Alex Rivera,Red,Beta integration test start,2026-05-28,Data Platform API readiness,Blocked dependency
+Field Operations Workflow Automation,Taylor Brooks,Jordan Kim,Yellow,Regional adoption readiness review,2026-05-30,Change champion network,Overdue readiness update
+Data Platform Stabilization,Noah Grant,Priya Shah,Green,API readiness milestone,2026-05-24,Architecture validation,Green status needs evidence

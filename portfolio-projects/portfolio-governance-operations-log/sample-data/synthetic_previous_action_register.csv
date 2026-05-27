@@ -1,0 +1,4 @@
+action_id,initiative,action,owner,due_date,status,source,notes
+ACT-001,Field Operations Workflow Automation,Provide change champion update and regional readiness view.,Jordan Kim,2026-05-17,Overdue,Prior governance meeting,Missed two updates
+ACT-002,Customer Portal Modernization,Confirm dependency path for beta date with Data Platform owner.,Alex Rivera,2026-05-22,Open,Prior governance meeting,Carry-forward item
+ACT-003,Regulatory Reporting Remediation,Provide validation status for compliance checkpoint.,Sam Patel,2026-05-20,Open,PMO request,Missing at cutoff

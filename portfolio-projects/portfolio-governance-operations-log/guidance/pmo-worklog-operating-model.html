@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pmo Worklog Operating Model</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root { --fg:#1f2937; --muted:#4b5563; --line:#d1d5db; --soft:#f9fafb; --accent:#374151; }
+body { font-family: Arial, Helvetica, sans-serif; color: var(--fg); line-height: 1.55; margin: 0; background: #fff; }
+main { max-width: 960px; margin: 0 auto; padding: 40px 28px 60px; }
+h1 { font-size: 2rem; margin: 0 0 0.5rem; }
+h2 { margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1.2rem; }
+h3 { margin-top: 1.4rem; }
+p { margin: 0.6rem 0; }
+ul { padding-left: 1.4rem; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+th, td { border: 1px solid var(--line); padding: 0.65rem; text-align: left; vertical-align: top; }
+th { background: var(--soft); }
+.callout { background: var(--soft); border-left: 4px solid var(--accent); padding: 1rem; margin: 1rem 0; }
+.example { background: #f3f4f6; padding: 0.85rem; border-radius: 8px; }
+code { background: #f3f4f6; padding: 0.1rem 0.25rem; border-radius: 4px; }
+footer { margin-top: 2rem; color: var(--muted); font-size: 0.9rem; }
+</style>
+
+</head>
+<body>
+<main>
+<h1>Pmo Worklog Operating Model</h1>
+
+<p>The worklog operating model turns fragmented PMO work into a repeatable weekly cycle.</p>
+<h2>Capture standards</h2>
+<table><tr><th>Field</th><th>Why it matters</th></tr>
+<tr><td>Date</td><td>Supports stale update detection and weekly reporting.</td></tr>
+<tr><td>Initiative</td><td>Prevents cross-project confusion.</td></tr>
+<tr><td>Owner</td><td>Clarifies who owes the next move.</td></tr>
+<tr><td>Due date</td><td>Turns a discussion into trackable follow-through.</td></tr>
+<tr><td>Raw note</td><td>Preserves source context before interpretation.</td></tr></table>
+<h2>Good worklog notes</h2>
+<div class="example">Customer Portal blocked by Data Platform API readiness. Priya says readiness date moved from May 24 to May 31. Needs Alex and Priya to confirm dependency path before Friday governance review.</div>
+<h2>Weak worklog notes</h2>
+<div class="example">Portal still blocked. Need to discuss.</div>
+<p>The weak note may be true, but it lacks owner, date, impact, and required action.</p>
+
+<footer>Portfolio Governance Operations Log — synthetic, public-safe guidance. Human owners retain decision authority.</footer>
+</main>
+</body>
+</html>
