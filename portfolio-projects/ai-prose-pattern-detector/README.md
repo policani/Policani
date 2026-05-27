@@ -1,10 +1,10 @@
-# VoiceCheck
+# AI Prose-Pattern Detector
 
-VoiceCheck is an agent-readable prose QA toolkit for finding writing that
-sounds generic, over-processed, or AI-shaped.
+AI Prose-Pattern Detector is an agent-readable prose QA toolkit for finding
+writing patterns that make text sound generic, over-processed, or AI-shaped.
 
-It is not an AI detector. It does not claim to identify who wrote a draft.
-Instead, it gives writers a practical review system for visible prose patterns:
+It does not claim to prove who wrote a draft. Instead, it gives writers a
+practical review system for visible AI-likeness and prose-quality patterns:
 filler openings, lifeless verbs, decorative adjectives, formulaic contrast,
 condensed expert prose, mechanical rhythm, generic closers, and formatting that
 looks more organized than the thinking underneath it.
@@ -25,16 +25,17 @@ and padded. Others become compressed expert prose: long noun chains,
 comma-packed capability catalogs, and scope-setting phrases that sound sharp
 once but robotic after repeated use.
 
-VoiceCheck treats both as quality problems. The goal is not to make every piece
-sound informal. The goal is to preserve judgment, specificity, and voice.
+AI Prose-Pattern Detector treats both as quality problems. The goal is not to
+make every piece sound informal. The goal is to preserve judgment, specificity,
+and voice.
 
 ## Package Structure
 
 ```text
-VoiceCheck/
+AI Prose-Pattern Detector/
   AGENTS.md
   README.md
-  voicecheck-settings.md
+  detector-settings.md
   references/
     prose-quality-rubric.md
   examples/
@@ -48,13 +49,14 @@ VoiceCheck/
 Use the folder as an agent project or copy its contents into a supported AI
 workspace.
 
-1. Put `AGENTS.md`, `voicecheck-settings.md`, and `references/` in the project.
+1. Put `AGENTS.md`, `detector-settings.md`, and `references/` in the project.
 2. Paste prose into the agent chat.
 3. Ask for one of the supported modes:
-   - `/voicecheck`
+   - `/ai-prose-check`
+   - `/prose-pattern`
    - `flag check`
    - `audit this`
-   - `rewrite using VoiceCheck`
+   - `rewrite using the detector`
    - `produce this in a natural voice`
 
 Examples are optional. They show the intended output style but are not required
@@ -77,7 +79,7 @@ Uses the rubric silently while drafting new prose.
 
 ## Customization
 
-All behavior settings live in `voicecheck-settings.md`:
+All behavior settings live in `detector-settings.md`:
 
 - default mode
 - rewrite strength
@@ -93,22 +95,22 @@ when to load which files.
 ## Example Use
 
 ```text
-/voicecheck
+/ai-prose-check
 
 This is not just a reporting process, it is a comprehensive operating cadence
 that leverages stakeholder alignment, governance, prioritization, visibility,
 decision quality, and execution discipline to drive meaningful outcomes.
 ```
 
-VoiceCheck should flag formulaic contrast, vague verbs, decorative abstraction,
-and compressed comma-heavy prose. A better rewrite would name the practical
-function of the process and split the crowded sentence.
+The detector should flag formulaic contrast, vague verbs, decorative
+abstraction, and compressed comma-heavy prose. A better rewrite would name the
+practical function of the process and split the crowded sentence.
 
 ## Responsible Use
 
-VoiceCheck should not be used to accuse a writer of using AI. Many flagged
-patterns also appear in human business writing, especially rushed executive
-drafts, consulting prose, and technical documentation.
+AI Prose-Pattern Detector should not be used to accuse a writer of using AI.
+Many flagged patterns also appear in human business writing, especially rushed
+executive drafts, consulting prose, and technical documentation.
 
 Use it as a writing quality gate: identify weak patterns, preserve the real
 thinking, and improve the draft.
@@ -117,8 +119,8 @@ thinking, and improve the draft.
 
 Repository description:
 
-> Agent-readable prose QA toolkit for finding AI-shaped writing patterns and
-> rewriting drafts into clearer, more specific human prose.
+> Agent-readable AI prose-pattern detector for finding AI-shaped writing
+> patterns and rewriting drafts into clearer, more specific human prose.
 
 Suggested topics:
 
@@ -126,6 +128,8 @@ Suggested topics:
 writing
 prose
 ai-writing
+ai-detection
+ai-prose
 prompt-engineering
 editing
 style-guide

@@ -38,7 +38,7 @@ I am building this space around public-safe examples such as:
 
 - [Resume Evidence Engine](portfolio-projects/resume-evidence-engine/) - a workflow project for job seekers who want evidence-bound, AI-assisted help with role scoring, resume drafting, cover letters, proof narratives, local browser builders, and Markdown-to-DOCX handoff. It demonstrates practical AI workflow design with source-of-truth files, guardrails, reusable templates, fictional sample outputs, and human review.
 - [Job Search Workbench](portfolio-projects/job-search-workbench/) - a workflow project for job seekers who want to scan public employer job boards, filter roles by title, location, salary, posting age, and job-description evidence, then export a review list. It demonstrates workflow design for messy external data, source-health diagnostics, and human-in-the-loop career operations.
-- [VoiceCheck](portfolio-projects/voicecheck/) - a prose QA toolkit for finding AI-shaped writing patterns, condensed expert language, formulaic contrast, and generic business prose. It demonstrates agent-readable quality gates, centralized settings, reusable rubrics, and human-in-the-loop editing.
+- [AI Prose-Pattern Detector](portfolio-projects/ai-prose-pattern-detector/) - a prose QA toolkit for finding AI-shaped writing patterns, condensed expert language, formulaic contrast, and generic business prose. It demonstrates agent-readable quality gates, centralized settings, reusable rubrics, and human-in-the-loop editing.
 
 ## How I Work
 

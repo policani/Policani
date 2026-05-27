@@ -1,13 +1,14 @@
-# VoiceCheck Settings
+# AI Prose-Pattern Detector Settings
 
-This is the single customization file for VoiceCheck. Change behavior here, not
-inside `AGENTS.md` or the rubric.
+This is the single customization file for AI Prose-Pattern Detector. Change
+behavior here, not inside `AGENTS.md` or the rubric.
 
 ## Product Stance
 
-VoiceCheck reviews prose patterns. It does not decide whether a person or model
-wrote the text. Its job is to help a capable writer keep judgment, specificity,
-and voice while removing generic AI-shaped habits.
+AI Prose-Pattern Detector reviews prose patterns associated with AI-likeness. It
+does not decide whether a person or model wrote the text. Its job is to help a
+capable writer keep judgment, specificity, and voice while removing generic
+AI-shaped habits.
 
 ## Default Behavior
 
@@ -47,7 +48,7 @@ Preserve these unless the user explicitly asks to change them:
 
 ## Priority Signals
 
-Treat these as high-priority VoiceCheck signals:
+Treat these as high-priority detector signals:
 
 - filler openings that delay the point
 - decorative adjectives and lifeless verbs

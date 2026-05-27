@@ -1,4 +1,4 @@
-# VoiceCheck Prose Quality Rubric
+# AI Prose-Pattern Detector Prose Quality Rubric
 
 Use this rubric to identify visible prose patterns that make writing sound
 machine-shaped, over-processed, or generic. Patterns are signals, not proof of
@@ -7,7 +7,7 @@ authorship.
 ## Quick Scan
 
 Use these questions to identify meaningful flags. Apply the risk threshold and
-severity scale from `voicecheck-settings.md`.
+severity scale from `detector-settings.md`.
 
 1. Does it open with filler before naming the real point?
 2. Does it rely on vague verbs such as utilize, leverage, enable, optimize, or
@@ -216,6 +216,6 @@ Fix:
 
 ## Scoring
 
-Use the severity scale in `voicecheck-settings.md`. The rubric identifies which
+Use the severity scale in `detector-settings.md`. The rubric identifies which
 patterns fired; the settings file controls how many flags become Low, Medium, or
 High risk.

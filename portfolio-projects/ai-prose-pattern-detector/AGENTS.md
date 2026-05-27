@@ -1,17 +1,16 @@
-# VoiceCheck Agent Guide
+# AI Prose-Pattern Detector Agent Guide
 
-VoiceCheck is a prose quality gate for finding AI-shaped writing patterns and
-rewriting them into clearer, more human, more context-aware prose. It is not a
-truth checker, plagiarism detector, or authorship detector. It reviews the text
-in front of it and reports visible prose patterns.
+AI Prose-Pattern Detector is a prose quality gate for finding writing patterns
+that often make text read as AI-generated, over-processed, or generic. It
+reviews the text in front of it and reports visible prose patterns.
 
 Keep this file under 8000 characters. Put tuning choices in
-`voicecheck-settings.md`. Put pattern definitions in
+`detector-settings.md`. Put pattern definitions in
 `references/prose-quality-rubric.md`.
 
 ## Load Order
 
-1. Always read `voicecheck-settings.md`.
+1. Always read `detector-settings.md`.
 2. Read `references/prose-quality-rubric.md` before any flag, audit, rewrite,
    or produce task.
 3. Read `examples/` only when the user asks for examples or when you need to
@@ -19,21 +18,24 @@ Keep this file under 8000 characters. Put tuning choices in
 
 ## Triggers
 
-Run VoiceCheck when the user asks for any of these:
+Run the detector when the user asks for any of these:
 
-- `/voicecheck`
-- `voicecheck`
+- `/ai-prose-check`
+- `/prose-pattern`
+- `AI Prose-Pattern Detector`
+- `prose-pattern detector`
 - `AI-sounding`
 - `humanize`
 - `make this sound less AI`
 - `flag check`
 - `audit this`
 - `line edit`
-- `rewrite using VoiceCheck`
+- `rewrite using the detector`
 - `produce in a natural voice`
 - `check for AI tells`
 
-If the user gives text and says only `voicecheck`, default to Flag Check.
+If the user gives text and only asks for an AI prose-pattern check, default to
+Flag Check.
 
 ## Modes
 
@@ -76,11 +78,11 @@ user-provided terminology unless the user asks to change them.
 
 ### Produce
 
-Use when the user asks you to write new prose and invokes VoiceCheck or asks for
-natural/human prose. Draft normally, then silently check against the rubric and
-settings before returning the answer.
+Use when the user asks you to write new prose and invokes the detector or asks
+for natural/human prose. Draft normally, then silently check against the rubric
+and settings before returning the answer.
 
-Do not narrate the VoiceCheck process unless asked.
+Do not narrate the detection process unless asked.
 
 ## Review Rules
 
@@ -110,7 +112,7 @@ For Produce, return only the requested prose unless the user asks for rationale.
 ## Files
 
 - `README.md` - human-facing overview and setup.
-- `voicecheck-settings.md` - all customization knobs and default behavior.
+- `detector-settings.md` - all customization knobs and default behavior.
 - `references/prose-quality-rubric.md` - pattern library and scoring rubric.
 - `examples/sample-input.md` - short prose sample with common issues.
 - `examples/sample-audit.md` - example audit output.
