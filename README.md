@@ -50,7 +50,7 @@ I am building this space around public-safe examples such as:
 - A PMBOK® Guide-aligned, agent-assisted project initiation system for developing sponsor-ready project charters from business cases, notes, spreadsheets, project plans, stakeholder inputs, and source artifacts.
 - The workflow acts like a senior initiation and governance advisor: it challenges vague scope, clarifies ownership and decision rights, separates objectives from deliverables, surfaces assumptions, risks, dependencies, and open decisions, and produces polished Markdown, HTML, and DOCX outputs ready for review.
 
-[Portfolio Governance Operations Log](https://github.com/policani/Policani/tree/main/portfolio-projects/portfolio-governance-operations-log)
+[PMO Governance Operations Log](https://github.com/policani/Policani/tree/main/portfolio-projects/pmo-governance-operations-log)
 
 - A human-governed, AI-assisted PMO worklog system for turning rough notes, stakeholder updates, blockers, decisions, risks, scheduling issues, and follow-up items into usable governance artifacts.
 - The workflow helps a PMO or portfolio lead classify weekly operating signals, prepare governance meetings, draft stakeholder follow-ups, build executive air-support briefs, recommend project-plan updates, and close out meetings with clear decisions, actions, owners, due dates, unresolved items, and carry-forward topics.
