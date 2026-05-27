@@ -1,0 +1,229 @@
+{
+  "project_name": "Customer Onboarding Control Tower Modernization",
+  "project_id": "COCT-2026-01",
+  "version": "1.0 sample",
+  "date": "2026-05-27",
+  "sponsor": "Dana Lee, SVP Customer Operations",
+  "business_owner": "Priya Raman, VP Enterprise Onboarding",
+  "project_manager": "Alex Morgan, Program Manager",
+  "approval_body": "Customer Operations Steering Committee",
+  "authorization": "The Customer Operations Steering Committee authorizes initiation of the Customer Onboarding Control Tower Modernization project. The approved business case identified fragmented onboarding visibility, inconsistent handoffs, and delayed executive escalation as material causes of onboarding delay and customer dissatisfaction. This charter authorizes the project team to move from initiation into detailed planning, solution design, and controlled execution within the scope and guardrails defined below.",
+  "purpose": "The project exists to establish a shared operating view for enterprise customer onboarding and to reduce avoidable handoff delay between Sales, Implementation, Customer Success, Finance, and Support. The project supports the business outcome of improving onboarding predictability for enterprise customers while reducing escalation volume and manual status reconciliation. The charter references the approved business case as the basis for authorization; it does not restate the full investment argument.",
+  "business_outcome": "Improve enterprise onboarding predictability and reduce manual coordination burden across customer-facing teams.",
+  "why_now": "Enterprise onboarding volume is projected to increase in Q3, and current manual tracking does not provide reliable readiness, risk, or dependency visibility for launch commitments.",
+  "in_scope": [
+    "Define the onboarding control tower operating model for enterprise implementation projects.",
+    "Configure a consolidated onboarding status view using CRM, implementation tracker, and support readiness data feeds.",
+    "Pilot the control tower with the North America Enterprise segment and up to three onboarding teams.",
+    "Define intake, status, risk, escalation, and handoff standards for onboarding projects in the pilot scope.",
+    "Create executive reporting, operational dashboard views, and weekly exception review routines.",
+    "Prepare transition materials for operational handoff after the pilot."
+  ],
+  "out_of_scope": [
+    "Replacing the CRM system or implementation project management tool.",
+    "Redesigning the full customer onboarding methodology outside the pilot scope.",
+    "Automating all onboarding workflows end to end.",
+    "Expanding to SMB, partner-led, or international onboarding teams during this phase.",
+    "Changing contractual customer launch commitments without sponsor approval.",
+    "Building a long-term data warehouse or enterprise analytics platform."
+  ],
+  "deliverables": [
+    {
+      "name": "Initiation and planning package",
+      "description": "Approved charter, stakeholder map, milestone plan, and planning backlog."
+    },
+    {
+      "name": "Control tower operating model",
+      "description": "Defined roles, meeting rhythm, escalation model, status taxonomy, and exception review process."
+    },
+    {
+      "name": "Pilot dashboard and reporting views",
+      "description": "Operational and executive views showing onboarding status, risks, dependencies, launch readiness, and blocked work."
+    },
+    {
+      "name": "Data feed and reconciliation approach",
+      "description": "Documented source fields, refresh cadence, ownership, and reconciliation rules for pilot data."
+    },
+    {
+      "name": "Pilot execution report",
+      "description": "Pilot results, readiness findings, adoption observations, and go/no-go recommendation for scale-up."
+    },
+    {
+      "name": "Operational handoff package",
+      "description": "Runbook, support model, owner responsibilities, and post-pilot improvement backlog."
+    }
+  ],
+  "success_measures": [
+    {
+      "type": "Business outcome",
+      "measure": "Enterprise onboarding cycle-time predictability",
+      "baseline": "Baseline to be confirmed during planning",
+      "target": "Establish baseline and reduce schedule variance by 15% in pilot cohort",
+      "owner": "VP Enterprise Onboarding"
+    },
+    {
+      "type": "Operational",
+      "measure": "Manual status reconciliation effort",
+      "baseline": "Estimated 8-10 hours/week across pilot leads",
+      "target": "Reduce by at least 30% by end of pilot",
+      "owner": "Program Manager"
+    },
+    {
+      "type": "Governance",
+      "measure": "Aged onboarding blockers visible to steering",
+      "baseline": "No consistent consolidated view",
+      "target": "100% of blockers older than 5 business days visible in weekly exception review",
+      "owner": "Director Onboarding Operations"
+    },
+    {
+      "type": "Adoption",
+      "measure": "Pilot team use of standard status taxonomy",
+      "baseline": "Not standardized",
+      "target": "90% of pilot onboarding projects using standard taxonomy by pilot midpoint",
+      "owner": "Implementation Operations Lead"
+    }
+  ],
+  "assumptions": [
+    "CRM, implementation tracker, and support readiness data can be accessed with existing permissions during the pilot.",
+    "Pilot teams can allocate SMEs for requirements validation and weekly exception review.",
+    "The pilot can use existing reporting infrastructure without creating a new enterprise data platform.",
+    "Baseline measures can be established during planning before pilot execution begins."
+  ],
+  "constraints": [
+    "Pilot budget envelope is capped at $425,000 unless steering committee approves an exception.",
+    "Pilot must avoid changes to customer contract terms or launch commitments.",
+    "No net-new enterprise analytics platform is authorized in this phase.",
+    "Security review is required before customer-identifiable data is exposed in dashboard views.",
+    "Q3 enterprise launch freeze limits production changes during the last two weeks of September."
+  ],
+  "risks": [
+    {
+      "risk": "Source data quality is insufficient for reliable executive reporting.",
+      "impact": "Dashboard may create false confidence or require manual reconciliation.",
+      "mitigation": "Perform data profiling during planning and define confidence labels in dashboard views."
+    },
+    {
+      "risk": "Scope expands from pilot control tower to full onboarding transformation.",
+      "impact": "Timeline, budget, and stakeholder alignment could become unmanageable.",
+      "mitigation": "Use explicit out-of-scope language and steering approval for expansion."
+    },
+    {
+      "risk": "Pilot teams do not adopt standard status taxonomy.",
+      "impact": "Reporting will remain inconsistent and operational benefits will not materialize.",
+      "mitigation": "Assign onboarding operations owner and include taxonomy adoption in weekly review."
+    },
+    {
+      "risk": "Security review delays access to customer-identifiable data.",
+      "impact": "Pilot dashboard may launch with limited data or delayed timeline.",
+      "mitigation": "Engage security during planning and define non-PII fallback view."
+    }
+  ],
+  "dependencies": [
+    {
+      "dependency": "CRM field mapping from Sales Operations",
+      "owner": "Sales Operations",
+      "timing": "Planning weeks 1-2",
+      "consequence": "Dashboard requirements cannot be finalized."
+    },
+    {
+      "dependency": "Implementation tracker export access",
+      "owner": "Implementation Systems Admin",
+      "timing": "Planning week 2",
+      "consequence": "Pilot data feed cannot be validated."
+    },
+    {
+      "dependency": "Security review for customer-identifiable data",
+      "owner": "Security Governance",
+      "timing": "Before build completion",
+      "consequence": "Dashboard release may be delayed or limited to non-PII data."
+    },
+    {
+      "dependency": "Pilot team SME availability",
+      "owner": "VP Enterprise Onboarding",
+      "timing": "Planning and pilot execution",
+      "consequence": "Requirements validation and adoption may slip."
+    }
+  ],
+  "open_decisions": [
+    {
+      "decision": "Confirm whether dashboard will show customer names or anonymized account IDs in pilot.",
+      "owner": "Sponsor and Security Governance",
+      "due": "Before design signoff"
+    },
+    {
+      "decision": "Confirm pilot cohort selection and number of active onboarding projects included.",
+      "owner": "Business Owner",
+      "due": "Planning week 1"
+    },
+    {
+      "decision": "Confirm whether Finance requires benefit tracking beyond pilot measures.",
+      "owner": "Finance Partner",
+      "due": "Planning week 2"
+    }
+  ],
+  "governance": {
+    "steering_cadence": "Biweekly steering committee through planning and build; weekly exception review during pilot execution.",
+    "core_team_cadence": "Twice-weekly delivery standup during planning and build; weekly planning checkpoint with business owner.",
+    "escalation_path": "Project team -> Program Manager -> Business Owner -> Executive Sponsor -> Customer Operations Steering Committee.",
+    "decision_rights": [
+      "Project team may refine reporting fields, working backlog, and pilot operating details within approved scope.",
+      "Business owner approves pilot cohort, workflow standards, and operational handoff readiness.",
+      "Sponsor or steering committee approves scope expansion, budget exception, launch date change, customer commitment change, or material risk acceptance."
+    ],
+    "change_control": "Any change that adds a deliverable, expands pilot segment, increases budget beyond tolerance, changes launch commitments, or introduces new security/compliance exposure requires a documented change request and sponsor or steering approval."
+  },
+  "milestones": [
+    {
+      "phase": "Initiation approval",
+      "target": "May 2026",
+      "exit_criteria": "Charter approved and planning owner assigned."
+    },
+    {
+      "phase": "Planning and baseline",
+      "target": "June 2026",
+      "exit_criteria": "Scope baseline, data profiling, security path, pilot cohort, and milestone plan approved."
+    },
+    {
+      "phase": "Design and configuration",
+      "target": "July 2026",
+      "exit_criteria": "Dashboard design, operating model, and data feed approach accepted by business and technology owners."
+    },
+    {
+      "phase": "Pilot execution",
+      "target": "August-September 2026",
+      "exit_criteria": "Pilot used by selected teams with weekly exception review and adoption tracking."
+    },
+    {
+      "phase": "Pilot review and handoff",
+      "target": "October 2026",
+      "exit_criteria": "Pilot report, scale recommendation, runbook, and operational handoff completed."
+    }
+  ],
+  "approvals": [
+    {
+      "role": "Executive Sponsor",
+      "name": "Dana Lee",
+      "status": "Pending approval"
+    },
+    {
+      "role": "Business Owner",
+      "name": "Priya Raman",
+      "status": "Pending approval"
+    },
+    {
+      "role": "Project Manager",
+      "name": "Alex Morgan",
+      "status": "Pending acceptance"
+    },
+    {
+      "role": "Technology Owner",
+      "name": "Jordan Park",
+      "status": "Pending review"
+    },
+    {
+      "role": "Finance Partner",
+      "name": "Morgan Ellis",
+      "status": "Pending review"
+    }
+  ]
+}

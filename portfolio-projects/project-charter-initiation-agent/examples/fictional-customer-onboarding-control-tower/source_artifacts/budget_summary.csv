@@ -1,0 +1,7 @@
+category,rom_amount_usd,notes
+Program management and governance,65000,"Planning, coordination, status, steering preparation"
+Dashboard configuration,140000,Pilot dashboard build and reporting views
+Data mapping and integration support,90000,"Field mapping, extract logic, refresh validation"
+Security and compliance review,35000,Review of customer-identifiable data exposure
+Pilot operations and training,55000,"Training, runbook, adoption support"
+Contingency,40000,Must remain inside approved envelope unless sponsor approves exception

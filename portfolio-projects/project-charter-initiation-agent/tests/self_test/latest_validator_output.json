@@ -1,0 +1,52 @@
+[
+  {
+    "criterion": "why_project_exists",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "business_outcome",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "sponsor_and_owner",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "scope",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "deliverables",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "success_measures",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "assumptions_constraints",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "risks_dependencies_open_decisions",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "governance",
+    "status": "pass",
+    "missing": []
+  },
+  {
+    "criterion": "milestone_path",
+    "status": "pass",
+    "missing": []
+  }
+]
