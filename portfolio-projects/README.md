@@ -6,7 +6,7 @@ Each project is based on personal tools I use every day, scrubbed of private emp
 
 ## Projects
 
-- `resume-evidence-engine` - Evidence-bound job-search workflow for agent-assisted scoring, resume drafting, cover letters, proof narratives, and Markdown-to-DOCX handoff
-- `business-case-counselor` - Agent-assisted business case development system for interviewing stakeholders, ingesting source artifacts, maturing weak ideas into decision-ready cases, stress-testing assumptions, and producing Markdown or DOCX business case documents.
-- `job-search-workbench` - Local-first job-search workbench for scanning public employer job boards, filtering roles, reviewing source health, and exporting a job-seeker review list
+- `business-case-counselor` - Agent-assisted business case development system for interviewing stakeholders, ingesting source artifacts, challenging weak problem framing, applying audience-aware review, maturing early ideas into decision-ready cases, and producing Markdown, DOCX, or HTML outputs.
 - `ai-prose-pattern-detector` - Agent-readable prose QA toolkit for finding AI-shaped writing patterns and rewriting drafts into clearer, more specific human prose
+- `job-search-workbench` - Local-first job-search workbench for scanning public employer job boards, filtering roles, reviewing source health, and exporting a job-seeker review list
+- `resume-evidence-engine` - Evidence-bound job-search workflow for agent-assisted scoring, resume drafting, cover letters, proof narratives, and Markdown-to-DOCX handoff
