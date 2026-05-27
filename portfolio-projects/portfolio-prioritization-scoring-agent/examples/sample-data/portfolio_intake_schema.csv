@@ -1,0 +1,15 @@
+field,required,type,description
+initiative_id,yes,text,Unique initiative identifier.
+title,yes,text,Plain-language initiative title.
+category,yes,text,Portfolio category.
+strategic_theme,yes,text,Declared strategy linkage.
+mandatory_status,yes,enum,"Mandatory, Discretionary, Committed, or Unknown."
+sponsor,yes,text,Accountable business sponsor.
+owner,yes,text,Accountable delivery or initiative owner.
+decision_authority,yes,text,Governance body or leader with approval authority.
+estimated_cost_usd,preferred,number,Estimated cost in USD or local reporting currency.
+capacity_fte_months,preferred,number,Estimated delivery capacity demand.
+benefit_summary,preferred,text,Concise benefit statement.
+risk_rating,preferred,enum,"Low, Medium, or High portfolio risk rating."
+dependencies,preferred,text,Known dependencies or blockers.
+*_score,yes after scoring,integer 1-5,One score column for each criterion ID.

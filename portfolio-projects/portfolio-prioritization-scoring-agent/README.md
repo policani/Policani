@@ -1,81 +1,89 @@
 # Portfolio Prioritization Scoring Agent
 
-A lightweight, GitHub-ready operating system for portfolio scoring, prioritization, and executive decision support.
+A human-governed, AI-assisted portfolio decision-support system for evaluating approved projects and programs through transparent weighted scoring, portfolio metadata, strategic themes, constraints, risks, dependencies, ownership, and executive review artifacts.
 
-This package helps teams move from a pile of approved or proposed initiatives to an explainable portfolio view: what is in the portfolio, how initiatives compare, what is mandatory versus discretionary, where decision rights are unclear, and what trade-offs require human governance.
+This is not a funding engine, autonomous prioritization system, or replacement for a portfolio board. It helps humans structure the conversation, inspect tradeoffs, and make better decisions.
 
-## What this is
+## Operating problem
 
-- An agent-readable operating system for project portfolio prioritization.
-- A plain-language weighted scoring model with transparent criteria, weights, assumptions, and flags.
-- A reusable workflow for intake, scoring, what-if analysis, decision-support briefs, and quality review.
-- A small Python CLI that scores synthetic or user-provided portfolio intake data and produces Markdown, HTML, CSV, and JSONL log outputs.
+Organizations often have many approved or proposed initiatives but no consistent way to compare their strategic value, financial contribution, risk, effort, mandatory status, dependencies, and operational impact. The result is noisy prioritization, unclear ownership, overloaded teams, and decisions that are hard to defend later.
 
-## What this is not
+This project helps portfolio leaders convert initiative metadata into a visible scoring model and decision-support package.
 
-- Not an autonomous funding engine.
-- Not a replacement for executive judgment, sponsor authority, finance review, architecture review, legal review, or portfolio board decisions.
-- Not a full business case or charter builder. This system assumes upstream business cases, charters, or summaries already exist and works mainly from portfolio metadata and concise initiative summaries.
+## Who this is for
 
-## Quick start
+- PMO, EPMO, and portfolio leaders
+- Program and project leaders
+- Business owners and sponsors
+- Finance, technology, operations, and product stakeholders
+- Knowledge workers who need a structured prioritization model without pretending the AI owns the decision
 
-1. Review `AGENTS.md` to load the agent role, boundaries, and trust model.
-2. Fill `config/portfolio_context_template.md` for your organization.
-3. Use `prompts/01_initial_portfolio_operating_model_setup.md` to calibrate categories, criteria, weights, and governance cadence.
-4. Load initiatives using `templates/portfolio_intake_form.md` or `data/portfolio_intake_schema.csv`.
-5. Run the sample scoring flow:
+## What it does
 
-```bash
-python tools/score_portfolio.py \
-  --input samples/sample_intake_responses/synthetic_portfolio_intake.csv \
-  --criteria data/default_scoring_criteria.csv \
-  --output-dir samples/generated_markdown \
-  --html-dir samples/generated_html \
-  --log-dir samples/generated_logs
+- Defines portfolio categories, criteria, weights, gates, and review cadence
+- Normalizes initiative metadata from business cases, charters, spreadsheets, or notes
+- Applies transparent weighted scoring
+- Separates mandatory and discretionary work
+- Surfaces missing owners, unclear decision rights, weak assumptions, risks, and dependencies
+- Produces portfolio summaries, scoring matrices, decision briefs, logs, and quality reviews
+
+## What it does not do
+
+- It does not make final funding or sequencing decisions
+- It does not replace sponsor, finance, technology, or executive governance review
+- It does not create full business cases or project charters
+- It does not perform opaque optimization or machine-learning ranking
+- It does not require real company data; all examples are synthetic
+
+## How to use this in ChatGPT
+
+Upload only the files inside `chatgpt-project/` when creating a ChatGPT Project. Do not upload the full repository. The other folders provide examples, sample data, templates, generated outputs, workflow diagrams, quality review, and local tooling for GitHub or Codex use.
+
+The runtime folder is flat, self-contained, and designed to stay under the ChatGPT Project file-count limit.
+
+Recommended first prompt after upload:
+
+“Use the runtime instructions and trigger map to help me set up a portfolio prioritization scoring model. Interview me for strategy, initiative categories, scoring criteria, weights, governance cadence, budget/capacity constraints, and decision-rights assumptions. Keep final decisions human-owned.”
+
+## Workflow
+
+```mermaid
+flowchart TD
+    A[Approved Initiative Metadata
+Business case and charter summaries, costs, benefits, owners, risks] --> B[Runtime Intake
+Normalize fields, classify initiative type, identify missing data]
+    B --> C{Governance Basics Present?}
+    C -->|No| D[Clarification Queue
+Sponsor, owner, decision rights, assumptions, constraints]
+    D --> B
+    C -->|Yes| E[Scoring Model Setup
+Criteria, weights, gates, mandatory vs discretionary treatment]
+    E --> F[Weighted Scoring
+Strategic alignment, value, risk, impact, effort, dependencies]
+    F --> G[Portfolio Review
+Rankings, tradeoffs, constraints, risk/dependency view, KPI summary]
+    G --> H{Decision Support Needed?}
+    H -->|Yes| I[Executive Decision Brief
+Options, tradeoffs, risks, assumptions, open questions]
+    H -->|No| J[Portfolio Summary View
+Scored matrix, watch items, recommended follow-up]
+    I --> K[Human Portfolio Forum
+Leaders decide funding, sequencing, acceptance, or deferral]
+    J --> K
+    K --> L[Decision Log and Follow-up
+Record rationale, owners, actions, next review]
+
 ```
 
-6. Read `samples/generated_markdown/portfolio_decision_support_brief.md` and `samples/generated_html/portfolio_summary.html`.
+## Repository structure
 
-## Repository layout
+- `chatgpt-project/` — flat runtime folder for ChatGPT upload
+- `examples/` — synthetic data, sample prompts, sample outputs, and source artifacts
+- `templates/` — reusable templates for review outside the runtime folder
+- `tools/` — local Python scoring utility
+- `workflow/` — Mermaid workflow diagram
+- `quality-review/` — senior portfolio manager self-critique
 
-| Folder | Purpose |
-| --- | --- |
-| `config/` | Editable portfolio context and operating assumptions. |
-| `docs/` | Operating model, scoring guide, trust model, KPI guide, ingestion guidance, and output guidance. |
-| `prompts/` | Reusable agent prompt packs for setup, scoring, what-if analysis, executive briefs, and quality review. |
-| `templates/` | Reusable intake, scoring, reporting, rubric, and decision-support templates. |
-| `data/` | Default criteria, intake schema, and sample synthetic portfolio data. |
-| `tools/` | Reproducible scoring CLI using Python standard library only. |
-| `samples/` | Synthetic source artifacts, sample prompts, intake responses, generated outputs, logs, and self-critique. |
+## Human-control model
 
-## Scoring model summary
-
-The default model uses seven 1-5 scoring criteria:
-
-1. Strategic alignment
-2. Financial or mission value
-3. Customer or operational impact
-4. Risk reduction or compliance criticality
-5. Dependency enablement
-6. Readiness and confidence
-7. Effort or cost feasibility
-
-Each score is multiplied by an explicit weight. The weighted sum is normalized to a 100-point score. Mandatory or regulatory work is flagged separately so the model does not pretend every compliance commitment is purely discretionary.
-
-## Human control principle
-
-The agent may propose scores, expose assumptions, compare trade-offs, and draft decision-support briefs. Final portfolio funding, sequencing, termination, and commitment decisions stay with accountable human leaders.
-
-## Industry alignment notes
-
-The package uses common project portfolio management patterns: portfolio components, strategic alignment, weighted scoring, value-vs-effort thinking, governance cadence, risk and dependency visibility, and decision readiness. It is intentionally simpler than optimization-heavy portfolio tooling so the logic remains explainable and auditable.
-
-Useful external references:
-
-- PMI, The Standard for Portfolio Management: https://www.pmi.org/standards/for-portfolio-management
-- PMI, Project Portfolio Management techniques: https://www.pmi.org/learning/library/project-portfolio-management-techniques-7624
-- Smartsheet, Project Management Scoring Models: https://www.smartsheet.com/content/project-scoring
-
-## License
-
-No license has been selected. Add a license before publishing this repository publicly.
+The system may recommend scoring approaches, identify gaps, calculate weighted scores, summarize tradeoffs, and prepare decision briefs. It must not approve, cancel, fund, sequence, or accept risk on behalf of leaders.
