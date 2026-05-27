@@ -1,0 +1,49 @@
+{
+  "title": "",
+  "decision_needed": "",
+  "decision_owner": "",
+  "requested_action": "Approve funding / approve discovery / prioritize / change scope / defer / reject",
+  "decision_timing": "",
+  "problem_statement": "",
+  "strategic_alignment": "",
+  "current_state": "",
+  "gap_analysis": "",
+  "desired_future_state": "",
+  "stakeholders": [],
+  "scope_in": [],
+  "scope_out": [],
+  "options": [
+    {
+      "name": "Do nothing",
+      "description": "",
+      "advantages": [],
+      "disadvantages": [],
+      "notes": ""
+    },
+    {
+      "name": "Option A",
+      "description": "",
+      "advantages": [],
+      "disadvantages": [],
+      "notes": ""
+    },
+    {
+      "name": "Option B",
+      "description": "",
+      "advantages": [],
+      "disadvantages": [],
+      "notes": ""
+    }
+  ],
+  "recommended_solution": "",
+  "benefits": [],
+  "costs": [],
+  "risks": [],
+  "assumptions": [],
+  "constraints": [],
+  "implementation_milestones": [],
+  "governance": "",
+  "success_measures": [],
+  "next_steps": [],
+  "open_questions": []
+}

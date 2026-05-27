@@ -1,0 +1,5 @@
+Category,Item,Type,Estimate,Confidence,Evidence or Assumption,Measurement Approach,Owner
+Benefit,Reduced agent search time,Productivity,TBD,Low,Assumption based on support manager notes,Measure current and future handle time,Support Ops
+Benefit,Improved content currency,Operating model,TBD,Medium,Known owner gaps,Track stale article percentage,Content Lead
+Cost,Discovery labor,One-time,TBD,Medium,Expected cross-functional discovery effort,Track hours and owner commitments,Program Lead
+Cost,Possible platform cost,Ongoing,TBD,Low,Depends on reuse vs new platform decision,Compare options during discovery,Technology

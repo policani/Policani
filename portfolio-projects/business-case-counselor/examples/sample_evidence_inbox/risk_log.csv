@@ -1,0 +1,4 @@
+Type,Item,Impact,Likelihood,Mitigation or Validation,Owner,Due Date,Status
+Risk,Tool selected before governance design,High,Medium,Require governance model before implementation funding,Program Lead,,Open
+Assumption,Fragmented knowledge increases handle time,Medium,Medium,Validate with support metrics during discovery,Support Ops,,Open
+Constraint,Implementation funding not yet approved,High,High,Limit initial ask to discovery funding,Executive Sponsor,,Open
