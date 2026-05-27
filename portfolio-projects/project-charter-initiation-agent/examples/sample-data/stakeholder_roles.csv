@@ -1,0 +1,6 @@
+role,name_or_group,accountability,decision_rights,cadence
+Executive Sponsor,Dana Lee,Executive authorization and tradeoff decisions,"Approves scope, funding, and material risk changes",Biweekly steering
+Business Owner,Priya Raman,Business outcomes and pilot adoption,Approves pilot cohort and operational handoff,Weekly checkpoint
+Project Manager,Alex Morgan,Planning and execution coordination,Manages baseline and change request flow,Twice-weekly core team
+Technology Owner,Jordan Park,Dashboard and data-feed feasibility,Approves technical approach within constraints,Weekly technical review
+Finance Partner,Morgan Ellis,Budget tracking and benefit measurement,Reviews budget variance and benefit tracking,Monthly or as needed
