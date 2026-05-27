@@ -36,27 +36,26 @@ I am building this space around public-safe examples such as:
 
 ## Featured Portfolio Projects
 
-[resume-evidence-engine](https://github.com/policani/resume-evidence-engine)
-
-- An evidence-bound workflow project for job seekers who want AI-assisted help with role scoring, resume drafting, cover letters, proof narratives, local browser builders, and Markdown-to-DOCX handoff.
-- It demonstrates practical AI workflow design with source-of-truth files, guardrails, reusable templates, fictional sample outputs, and human review.
-
-[job-search-workbench](https://github.com/policani/job-search-workbench)
-
-- A local-first workflow project for job seekers who want to scan public employer job boards, filter roles by title, location, salary, posting age, and job-description evidence, then export a review list.
-- It demonstrates workflow design for messy external data, source-health diagnostics, and human-in-the-loop career operations.
-
-[ai-prose-pattern-detector](https://github.com/policani/ai-prose-pattern-detector)
-
-- A prose QA toolkit for finding AI-shaped writing patterns, condensed expert language, formulaic contrast, and generic business prose.
-- It demonstrates agent-readable quality gates, centralized settings, reusable rubrics, and human-in-the-loop editing.
-
-[business-case-counselor](https://github.com/policani/business-case-counselor)
+[business-case-counselor](https://github.com/policani/Policani/tree/main/portfolio-projects/business-case-counselor)
 
 - An agent-assisted business case development system for turning early ideas, notes, spreadsheets, project plans, and source documents into decision-ready business cases.
 - It interviews the user, ingests supporting artifacts, strengthens weak or incomplete ideas, stress-tests assumptions through a critical review council, and generates structured Markdown or richly formatted DOCX outputs.
 - It demonstrates how practical AI can support business decision quality without replacing human judgment, sponsor accountability, financial scrutiny, or governance discipline.
 
+[ai-prose-pattern-detector](https://github.com/policani/Policani/tree/main/portfolio-projects/ai-prose-pattern-detector)
+
+- A prose QA toolkit for finding AI-shaped writing patterns, condensed expert language, formulaic contrast, and generic business prose.
+- It demonstrates agent-readable quality gates, centralized settings, reusable rubrics, and human-in-the-loop editing.
+
+[job-search-workbench](https://github.com/policani/Policani/tree/main/portfolio-projects/job-search-workbench)
+
+- A local-first workflow project for job seekers who want to scan public employer job boards, filter roles by title, location, salary, posting age, and job-description evidence, then export a review list.
+- It demonstrates workflow design for messy external data, source-health diagnostics, and human-in-the-loop career operations.
+
+[resume-evidence-engine](https://github.com/policani/Policani/tree/main/portfolio-projects/resume-evidence-engine)
+
+- An evidence-bound workflow project for job seekers who want AI-assisted help with role scoring, resume drafting, cover letters, proof narratives, local browser builders, and Markdown-to-DOCX handoff.
+- It demonstrates practical AI workflow design with source-of-truth files, guardrails, reusable templates, fictional sample outputs, and human review.
 
 ## How I Work
 
