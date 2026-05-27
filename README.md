@@ -37,7 +37,7 @@ I am building this space around public-safe examples such as:
 - AI-assisted project and portfolio documentation workflows
 - Job-search and career-operations workflow architecture
 
-## Featured Management Projects
+## Featured PMO & Portfolio Systems
 
 [Business-Case-Counselor](https://github.com/policani/Policani/tree/main/portfolio-projects/business-case-counselor)
 
@@ -56,7 +56,7 @@ I am building this space around public-safe examples such as:
 - The workflow helps stakeholders define scoring criteria, weights, governance cadence, budget and capacity constraints, mandatory-versus-discretionary work, portfolio KPIs, and executive decision views.
 - It demonstrates how AI can improve portfolio prioritization, scenario review, and decision readiness without turning funding, sequencing, or tradeoff decisions over to an autonomous tool.
 
-## Featured Personal Projects
+## Featured AI Workflow Systems (tie these project modules together from higher level folders)
 
 [AI-Prose-Pattern-Detector](https://github.com/policani/Policani/tree/main/portfolio-projects/ai-prose-pattern-detector)
 
@@ -75,12 +75,13 @@ I am building this space around public-safe examples such as:
 
 ## How I Work
 
-- Start with the operating problem, not the template.
-- Make ownership, constraints, decisions, and tradeoffs visible.
-- Build enough process to create trust, then keep it usable.
-- Prioritize signal over noise and momentum over red tape.
-- Treat AI as leverage for structure, synthesis, and QA, not as a substitute for judgment.
-- Keep the final output readable for executives, useful for practitioners, and honest about risk.
+- Start with the operating problem, not the artifact.
+- Make ownership, constraints, decisions, risks, and tradeoffs visible.
+- Separate demand, priority, readiness, and execution so leaders can see what is real.
+- Build only enough process to create trust, clarity, and follow-through.
+- Favor useful signal over status theater, red tape, or process for its own sake.
+- Use AI for structure, synthesis, review, and repeatability; keep judgment and accountability with people.
+- Produce outputs that executives can act on, practitioners can use, and sponsors can defend.
 
 ## Connect
 
