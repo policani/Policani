@@ -8,7 +8,7 @@ This GitHub profile is a public portfolio space for examples of how I structure 
 
 ## Core Lanes
 
-- Enterprise PMO, EPMO, and portfolio governance
+- Enterprise PMO, EPMO, and AI portfolio governance
 - Executive operating cadence and decision support
 - Intake, prioritization, sequencing, and capacity visibility
 - Revenue technology, finance systems, and release-readiness governance
