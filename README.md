@@ -32,7 +32,7 @@ I am building this space around public-safe examples such as:
 - PMO intake, scoring, prioritization, and sequencing models
 - Portfolio scoring matrices and executive decision-support briefs
 - Launch readiness and executive status frameworks
-- RAID and decision-log templates
+- RAID, decision-log, action-register, escalation, meeting-prep, and governance closeout templates
 - Portfolio signal-quality checklists
 - AI-assisted project and portfolio documentation workflows
 - Job-search and career-operations workflow architecture
@@ -49,6 +49,12 @@ I am building this space around public-safe examples such as:
 
 - A PMBOK® Guide-aligned, agent-assisted project initiation system for developing sponsor-ready project charters from business cases, notes, spreadsheets, project plans, stakeholder inputs, and source artifacts.
 - The workflow acts like a senior initiation and governance advisor: it challenges vague scope, clarifies ownership and decision rights, separates objectives from deliverables, surfaces assumptions, risks, dependencies, and open decisions, and produces polished Markdown, HTML, and DOCX outputs ready for review.
+
+[Portfolio Governance Operations Log](https://github.com/policani/Policani/tree/main/portfolio-projects/portfolio-governance-operations-log)
+
+- A human-governed, AI-assisted PMO worklog system for turning rough notes, stakeholder updates, blockers, decisions, risks, scheduling issues, and follow-up items into usable governance artifacts.
+- The workflow helps a PMO or portfolio lead classify weekly operating signals, prepare governance meetings, draft stakeholder follow-ups, build executive air-support briefs, recommend project-plan updates, and close out meetings with clear decisions, actions, owners, due dates, unresolved items, and carry-forward topics.
+- It demonstrates how practical AI can improve governance hygiene, meeting preparation, escalation framing, and follow-through without becoming a generic meeting-notes template, autonomous project manager, or full PPM platform.
 
 [Portfolio Prioritization Scoring Agent](https://github.com/policani/Policani/tree/main/portfolio-projects/portfolio-prioritization-scoring-agent)
 
@@ -80,7 +86,7 @@ I am building this space around public-safe examples such as:
 - Separate demand, priority, readiness, and execution so leaders can see what is real.
 - Build only enough process to create trust, clarity, and follow-through.
 - Favor useful signal over status theater, red tape, or process for its own sake.
-- Use AI for structure, synthesis, review, and repeatability; keep judgment and accountability with people.
+- Use AI for structure, synthesis, signal review, follow-through, and repeatability; keep judgment, commitments, approvals, and accountability with people.
 - Produce outputs that executives can act on, practitioners can use, and sponsors can defend.
 
 ## Connect
