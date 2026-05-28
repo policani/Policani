@@ -37,12 +37,29 @@ I am building this space around public-safe examples such as:
 - AI-assisted project and portfolio documentation workflows
 - Job-search and career-operations workflow architecture
 
-## Featured Standalone Repositories
+## AI Portfolio, PMO, and Workflow Systems
+
+These repositories are public-safe examples of AI-assisted operating systems, not general software demos. They are organized by the type of decision or workflow they support.
+
+### AI Portfolio Intelligence
 
 [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system)
 
 - An operating system for decomposing rough AI ideas into intelligence architecture, proof requirements, governance controls, and build/buy/wait routes before teams spend time on demos, vendors, proofs of concept, or delivery planning.
 - It demonstrates an intelligence review layer for AI portfolio management with a flat ChatGPT Project runtime, synthetic sample data, Mermaid workflows, local tooling, and human accountability guardrails.
+
+[Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent)
+
+- A human-governed, AI-assisted portfolio decision-support system for evaluating approved projects and programs through transparent weighted scoring, portfolio metadata, strategic themes, constraints, risks, dependencies, and ownership.
+- The workflow helps stakeholders define scoring criteria, weights, governance cadence, budget and capacity constraints, mandatory-versus-discretionary work, portfolio KPIs, and executive decision views.
+- It demonstrates how AI can improve portfolio prioritization, scenario review, and decision readiness without turning funding, sequencing, or tradeoff decisions over to an autonomous tool.
+
+[Operating Patterns](https://github.com/policani/operating-patterns)
+
+- A public-safe library of generalized AI, PMO, and portfolio operating patterns for governance, decision support, value realization, and resource allocation.
+- It demonstrates reusable management patterns that can support AI portfolio review, executive cadence design, and practical operating model development.
+
+### AI PMO Operating Systems
 
 [Business Case System](https://github.com/policani/business-case-system)
 
@@ -55,19 +72,13 @@ I am building this space around public-safe examples such as:
 - A PMBOK Guide-aligned, agent-assisted project initiation system for developing sponsor-ready project charters from business cases, notes, spreadsheets, project plans, stakeholder inputs, and source artifacts.
 - The workflow acts like a senior initiation and governance advisor: it challenges vague scope, clarifies ownership and decision rights, separates objectives from deliverables, surfaces assumptions, risks, dependencies, and open decisions, and produces polished Markdown, HTML, and DOCX outputs ready for review.
 
-[Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent)
-
-- A human-governed, AI-assisted portfolio decision-support system for evaluating approved projects and programs through transparent weighted scoring, portfolio metadata, strategic themes, constraints, risks, dependencies, and ownership.
-- The workflow helps stakeholders define scoring criteria, weights, governance cadence, budget and capacity constraints, mandatory-versus-discretionary work, portfolio KPIs, and executive decision views.
-- It demonstrates how AI can improve portfolio prioritization, scenario review, and decision readiness without turning funding, sequencing, or tradeoff decisions over to an autonomous tool.
-
 [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log)
 
 - A human-governed, AI-assisted PMO worklog system for turning rough notes, stakeholder updates, blockers, decisions, risks, scheduling issues, and follow-up items into usable governance artifacts.
 - The workflow helps a PMO or portfolio lead classify weekly operating signals, prepare governance meetings, draft stakeholder follow-ups, build executive air-support briefs, recommend project-plan updates, and close out meetings with clear decisions, actions, owners, due dates, unresolved items, and carry-forward topics.
 - It demonstrates how practical AI can improve governance hygiene, meeting preparation, escalation framing, and follow-through without becoming a generic meeting-notes template, autonomous project manager, or full PPM platform.
 
-## Featured AI Workflow Systems
+### AI Career and Evidence Workflow Systems
 
 [AI Prose-Pattern Detector](https://github.com/policani/ai-prose-pattern-detector)
 
@@ -76,7 +87,7 @@ I am building this space around public-safe examples such as:
 
 [Job Search Workbench](https://github.com/policani/Job-Search-Workbench)
 
-- A local-first workflow project for job seekers who want to scan public employer job boards, filter roles by title, location, salary, posting age, and job-description evidence, then export a review list.
+- An AI-ready local workflow project for job seekers who want to scan public employer job boards, filter roles by title, location, salary, posting age, and job-description evidence, then export a review list.
 - It demonstrates workflow design for messy external data, source-health diagnostics, and human-in-the-loop career operations.
 
 [Resume Evidence Engine](https://github.com/policani/resume-evidence-engine)
