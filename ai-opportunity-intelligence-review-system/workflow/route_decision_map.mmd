@@ -1,0 +1,14 @@
+flowchart TD
+    A[Decomposed Opportunity] --> B{Workflow clear?}
+    B -- No --> C[Decompose Further]
+    B -- Broken process --> D[Process First]
+    B -- Yes --> E{Value evidenced?}
+    E -- No --> F[Stop Or Manual Proof]
+    E -- Directional --> G{Data and controls ready?}
+    E -- Strong --> G
+    G -- Blocked --> H[Wait]
+    G -- High risk --> I[Control Review Before Proof]
+    G -- Ready --> J{Differentiated workflow?}
+    J -- Common --> K[Buy Or Existing Tools]
+    J -- Strategic --> L[Prototype Or Build]
+    J -- Capability gap --> M[Hire Or Upskill]

@@ -1,0 +1,13 @@
+flowchart LR
+    P[Purpose] --> S[Sensing]
+    S --> I[Interpretation]
+    I --> D[Decision]
+    D --> O[Orchestration]
+    O --> L[Learning]
+    L --> S
+    G[Govern And Assure] -. evals .-> P
+    G -. logs .-> S
+    G -. permissions .-> I
+    G -. human review .-> D
+    G -. rollback .-> O
+    G -. outcome review .-> L
