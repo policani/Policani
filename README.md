@@ -9,7 +9,7 @@ This GitHub profile is a public portfolio space for examples of how I structure 
 ## Start Here
 
 - Portfolio landing page: [policani.github.io](https://policani.github.io)
-- Public operating-pattern library: [Operating Patterns Wiki](https://github.com/policani/operating-patterns/wiki)
+- Public operating-pattern library: [Operating Patterns source pages](https://github.com/policani/operating-patterns/tree/main/wiki)
 - GitHub source bundle for the operating-pattern library: [operating-patterns](https://github.com/policani/operating-patterns)
 
 ## How to Evaluate This Portfolio
@@ -75,7 +75,7 @@ These repositories are public-safe examples of AI-assisted operating systems, no
 
 - A public-safe library of generalized AI, PMO, and portfolio operating patterns for governance, decision support, value realization, and resource allocation.
 - It demonstrates reusable management patterns that can support AI portfolio review, executive cadence design, and practical operating model development.
-- Start with the live wiki: [Operating Patterns Wiki](https://github.com/policani/operating-patterns/wiki)
+- Start with the source pages: [Operating Patterns](https://github.com/policani/operating-patterns/tree/main/wiki)
 
 ### AI PMO Operating Systems
 
