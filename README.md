@@ -6,6 +6,23 @@ My background is portfolio, program, project, and operations leadership across t
 
 This GitHub profile is a public portfolio space for examples of how I structure work, not a software engineering portfolio. The artifacts here focus on project-management systems, PMO tools, operating models, templates, and sanitized workflow examples.
 
+## Start Here
+
+- Portfolio landing page: [policani.github.io](https://policani.github.io)
+- Public operating-pattern library: [Operating Patterns Wiki](https://github.com/policani/operating-patterns/wiki)
+- GitHub source bundle for the operating-pattern library: [operating-patterns](https://github.com/policani/operating-patterns)
+
+## How to Evaluate This Portfolio
+
+This portfolio should be evaluated as operating-model and workflow design evidence, not as a traditional software engineering portfolio.
+
+Look for:
+
+- How rough demand becomes structured intake, ownership, risks, dependencies, decisions, and follow-through.
+- How AI is used for synthesis, review, drafting, and repeatability without taking over approvals or accountability.
+- How each system separates examples, templates, generated outputs, local tooling, and ChatGPT Project runtime files.
+- How public examples stay synthetic or generalized so they demonstrate judgment without exposing employer or client details.
+
 ## Core Lanes
 
 - Enterprise PMO, EPMO, portfolio governance, and AI value realization
@@ -58,6 +75,7 @@ These repositories are public-safe examples of AI-assisted operating systems, no
 
 - A public-safe library of generalized AI, PMO, and portfolio operating patterns for governance, decision support, value realization, and resource allocation.
 - It demonstrates reusable management patterns that can support AI portfolio review, executive cadence design, and practical operating model development.
+- Start with the live wiki: [Operating Patterns Wiki](https://github.com/policani/operating-patterns/wiki)
 
 ### AI PMO Operating Systems
 

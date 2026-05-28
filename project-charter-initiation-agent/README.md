@@ -9,6 +9,27 @@ This repository is designed in two layers:
 
 > **Use in ChatGPT:** upload only the files inside [`chatgpt-project/`](chatgpt-project/). Do not upload the full repository.
 
+## Status
+
+Public portfolio prototype. Designed for ChatGPT Project use, sponsor review, and workflow demonstration. Not a SaaS product, autonomous approval engine, or substitute for sponsor authorization, delivery planning, finance review, or governance approval.
+
+## How to evaluate this repo
+
+Open these first:
+
+- [`chatgpt-project/`](chatgpt-project/) for the flat ChatGPT runtime.
+- [`examples/sample-data/`](examples/sample-data/) for synthetic intake and source artifacts.
+- [`examples/sample-outputs/`](examples/sample-outputs/) for generated Markdown, HTML, DOCX, and quality-review outputs.
+- [`quality-review/`](quality-review/) for review gates and critique.
+
+Evaluate the repo on whether it turns approved intent into clear authorization, scope, ownership, governance rhythm, risks, dependencies, assumptions, open decisions, and planning handoff.
+
+## Before and after example
+
+Before: a project has enough intent to start moving, but scope, sponsor authority, decision rights, success measures, constraints, dependencies, and change-control rules are still scattered or implied.
+
+After: the work is framed as a sponsor-ready charter that defines why the project exists, what is authorized, who owns decisions, what is in and out of scope, what must be governed, and how the project moves into planning and execution.
+
 ## Compact workflow diagram
 
 GitHub renders the workflow below directly from Mermaid. A rendered PDF is also included for offline review or portfolio sharing.

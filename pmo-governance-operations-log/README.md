@@ -1,13 +1,34 @@
-# PMO Governance Operations Log
+﻿# PMO Governance Operations Log
 
 A human-governed, AI-assisted PMO worklog system for turning rough weekly notes, stakeholder updates, meeting outcomes, blockers, decisions, follow-up items, and escalation needs into structured governance summaries, action registers, decision logs, executive air-support briefs, project plan update recommendations, and next-meeting prep.
 
+## Status
+
+Public portfolio prototype. Designed for ChatGPT Project use, governance review, and workflow demonstration. Not a SaaS product, PPM replacement, autonomous project manager, or substitute for accountable PMO leadership.
+
+## How to evaluate this repo
+
+Open these first:
+
+- [`chatgpt-project/`](chatgpt-project/) for the flat ChatGPT runtime.
+- [`examples/sample-data/`](examples/sample-data/) for synthetic PMO worklog inputs.
+- [`examples/sample-outputs/`](examples/sample-outputs/) for generated summaries, logs, briefs, and HTML outputs.
+- [`quality-review/`](quality-review/) for senior PMO critique.
+
+Evaluate the repo on whether it turns rough operational noise into decisions, actions, escalations, risks, stakeholder follow-ups, plan updates, and next-meeting prep without pretending the AI owns the governance cycle.
+
+## Before and after example
+
+Before: updates, blockers, meeting notes, decisions, and follow-ups are scattered across messages, notes, and status conversations, making it hard to see what needs action before the next governance meeting.
+
+After: rough PMO notes are classified into governance signals, summarized for leaders, converted into action and decision registers, and carried forward into meeting prep and follow-through.
+
 This project is part of a PMO and portfolio operating-system sequence:
 
-1. Business Case Counselor — turns early ideas into decision-ready investment cases.
-2. Project Charter Initiation Agent — turns approved ideas into sponsor-ready project charters.
-3. Portfolio Prioritization Scoring Agent — compares approved work through transparent portfolio scoring.
-4. PMO Governance Operations Log — helps operate the recurring governance cycle once work is underway.
+1. Business Case Counselor - turns early ideas into decision-ready investment cases.
+2. Project Charter Initiation Agent - turns approved ideas into sponsor-ready project charters.
+3. Portfolio Prioritization Scoring Agent - compares approved work through transparent portfolio scoring.
+4. PMO Governance Operations Log - helps operate the recurring governance cycle once work is underway.
 
 ## What problem this solves
 
@@ -58,17 +79,17 @@ Example user request:
 
 ```text
 pmo-governance-operations-log/
-├── README.md
-├── AGENTS.md
-├── LICENSE.md
-├── .gitignore
-├── chatgpt-project/
-├── docs/
-├── examples/
-├── templates/
-├── tools/
-├── workflow/
-└── quality-review/
+  README.md
+  AGENTS.md
+  LICENSE.md
+  .gitignore
+  chatgpt-project/
+  docs/
+  examples/
+  templates/
+  tools/
+  workflow/
+  quality-review/
 ```
 
 ## Workflow

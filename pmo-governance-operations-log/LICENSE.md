@@ -1,7 +1,12 @@
-# License
+# Portfolio License Notice
 
-No public open-source license has been selected for this repository.
+Copyright (c) 2026 Marco Policani.
 
-Until a license is chosen, all rights are reserved by the repository owner. Do not assume permission to copy, redistribute, modify, or reuse this project outside the repository owner's intended portfolio use.
+This repository is published as a public portfolio artifact. No open-source reuse
+license is granted unless a later release states otherwise.
 
-Before publishing for broad reuse, choose an appropriate license and replace this file with the selected license text.
+You may view the repository for evaluation, hiring, learning, and discussion.
+Do not copy, redistribute, modify, resell, or reuse the project materials as a
+public or commercial package without written permission from the owner.
+
+The synthetic examples are fictional and are not real business evidence.

@@ -2,6 +2,27 @@
 
 A human-governed, AI-assisted operating system for decomposing vague AI ideas into intelligence architecture, proof requirements, value logic, governance controls, and build/buy/wait routes before teams spend time on demos, vendors, proofs of concept, or delivery planning.
 
+## Status
+
+Public portfolio prototype. Designed for ChatGPT Project use, executive review, and workflow demonstration. Not a SaaS product, autonomous approval engine, or substitute for accountable AI governance.
+
+## How to evaluate this repo
+
+Start with the README to understand the operating model, then inspect:
+
+- [`chatgpt-project/`](chatgpt-project/) for the flat ChatGPT runtime.
+- [`examples/sample-data/`](examples/sample-data/) for synthetic AI opportunity inputs.
+- [`examples/sample-outputs/`](examples/sample-outputs/) for generated architecture, routing, and governance outputs.
+- [`quality-review/`](quality-review/) for cohesion and senior-operator critique.
+
+Evaluate the repo on whether it separates AI enthusiasm from workflow value, proof burden, data readiness, controls, and human decision rights.
+
+## Before and after example
+
+Before: a team has a list of AI ideas, vendor claims, or prototype requests, but the work is bundled, the value evidence is uneven, and leaders do not know whether to build, buy, wait, process-map, or stop.
+
+After: each idea is decomposed into purpose, sensing, interpretation, decision, orchestration, learning, and govern/assure controls, with a route recommendation, proof plan, missing evidence, and human portfolio review path.
+
 ## Positioning
 
 AI makes it easier to propose projects than to understand them.

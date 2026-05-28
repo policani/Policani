@@ -1,8 +1,29 @@
-# Portfolio Prioritization Scoring Agent
+﻿# Portfolio Prioritization Scoring Agent
 
 A human-governed, AI-assisted portfolio decision-support system for evaluating approved projects and programs through transparent weighted scoring, portfolio metadata, strategic themes, constraints, risks, dependencies, ownership, and executive review artifacts.
 
 This is not a funding engine, autonomous prioritization system, or replacement for a portfolio board. It helps humans structure the conversation, inspect tradeoffs, and make better decisions.
+
+## Status
+
+Public portfolio prototype. Designed for ChatGPT Project use, executive review, and workflow demonstration. Not a SaaS product, optimization engine, autonomous funding tool, or replacement for portfolio governance.
+
+## How to evaluate this repo
+
+Open these first:
+
+- [`chatgpt-project/`](chatgpt-project/) for the flat ChatGPT runtime.
+- [`examples/sample-data/`](examples/sample-data/) for synthetic portfolio inputs.
+- [`examples/sample-outputs/`](examples/sample-outputs/) for scored matrices, executive briefs, logs, HTML, and DOCX outputs.
+- [`quality-review/`](quality-review/) for senior portfolio-manager critique.
+
+Evaluate the repo on whether it makes scoring transparent, separates mandatory and discretionary work, surfaces weak metadata, preserves human decision rights, and turns prioritization into an auditable conversation.
+
+## Before and after example
+
+Before: leaders have a portfolio of approved or proposed initiatives, but priorities are defended through narrative, urgency, politics, or incomplete data rather than visible criteria and tradeoffs.
+
+After: initiatives are normalized, scored through explicit criteria and weights, separated by mandatory/discretionary treatment, reviewed for missing owners and risks, and prepared for a human portfolio forum.
 
 ## Operating problem
 
@@ -43,7 +64,7 @@ The runtime folder is flat, self-contained, and designed to stay under the ChatG
 
 Recommended first prompt after upload:
 
-“Use the runtime instructions and trigger map to help me set up a portfolio prioritization scoring model. Interview me for strategy, initiative categories, scoring criteria, weights, governance cadence, budget/capacity constraints, and decision-rights assumptions. Keep final decisions human-owned.”
+"Use the runtime instructions and trigger map to help me set up a portfolio prioritization scoring model. Interview me for strategy, initiative categories, scoring criteria, weights, governance cadence, budget/capacity constraints, and decision-rights assumptions. Keep final decisions human-owned."
 
 ## Workflow
 
@@ -77,12 +98,12 @@ Record rationale, owners, actions, next review]
 
 ## Repository structure
 
-- `chatgpt-project/` — flat runtime folder for ChatGPT upload
-- `examples/` — synthetic data, sample prompts, sample outputs, and source artifacts
-- `templates/` — reusable templates for review outside the runtime folder
-- `tools/` — local Python scoring utility
-- `workflow/` — Mermaid workflow diagram
-- `quality-review/` — senior portfolio manager self-critique
+- `chatgpt-project/` - flat runtime folder for ChatGPT upload
+- `examples/` - synthetic data, sample prompts, sample outputs, and source artifacts
+- `templates/` - reusable templates for review outside the runtime folder
+- `tools/` - local Python scoring utility
+- `workflow/` - Mermaid workflow diagram
+- `quality-review/` - senior portfolio manager self-critique
 
 ## Human-control model
 
