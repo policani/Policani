@@ -1,0 +1,29 @@
+# Portfolio Prioritization Scoring Workflow
+
+```mermaid
+flowchart TD
+    A[Approved Initiative Metadata
+Business case and charter summaries, costs, benefits, owners, risks] --> B[Runtime Intake
+Normalize fields, classify initiative type, identify missing data]
+    B --> C{Governance Basics Present?}
+    C -->|No| D[Clarification Queue
+Sponsor, owner, decision rights, assumptions, constraints]
+    D --> B
+    C -->|Yes| E[Scoring Model Setup
+Criteria, weights, gates, mandatory vs discretionary treatment]
+    E --> F[Weighted Scoring
+Strategic alignment, value, risk, impact, effort, dependencies]
+    F --> G[Portfolio Review
+Rankings, tradeoffs, constraints, risk/dependency view, KPI summary]
+    G --> H{Decision Support Needed?}
+    H -->|Yes| I[Executive Decision Brief
+Options, tradeoffs, risks, assumptions, open questions]
+    H -->|No| J[Portfolio Summary View
+Scored matrix, watch items, recommended follow-up]
+    I --> K[Human Portfolio Forum
+Leaders decide funding, sequencing, acceptance, or deferral]
+    J --> K
+    K --> L[Decision Log and Follow-up
+Record rationale, owners, actions, next review]
+
+```

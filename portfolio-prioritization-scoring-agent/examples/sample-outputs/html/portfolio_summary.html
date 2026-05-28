@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portfolio Summary</title>
+<style>
+:root { --border:#d7d7d7; --text:#1f2937; --muted:#6b7280; --bg:#f8fafc; --card:#ffffff; }
+body { font-family: Arial, Helvetica, sans-serif; margin: 32px; color: var(--text); background: var(--bg); }
+h1, h2 { margin-bottom: 8px; }
+.card-grid { display: grid; grid-template-columns: repeat(4, minmax(160px, 1fr)); gap: 16px; margin: 20px 0; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+.card .value { font-size: 24px; font-weight: 700; margin-top: 6px; }
+table { width: 100%; border-collapse: collapse; background: var(--card); margin: 16px 0 28px; }
+th, td { border: 1px solid var(--border); padding: 9px 10px; vertical-align: top; font-size: 14px; }
+th { background: #eef2f7; text-align: left; }
+.bar { display: inline-block; width: 120px; height: 10px; border: 1px solid var(--border); background: #f3f4f6; margin-right: 8px; vertical-align: middle; }
+.bar span { display: block; height: 100%; background: #4b5563; }
+.score { font-weight: 700; }
+.callout { border-left: 5px solid #4b5563; background: #fff; padding: 14px 16px; margin: 18px 0; }
+.footer { color: var(--muted); font-size: 12px; margin-top: 28px; }
+</style>
+</head>
+<body>
+<h1>Portfolio Summary</h1>
+<p>Generated from synthetic data. Advisory decision support only; final funding and sequencing decisions remain with accountable human leaders.</p>
+<div class="card-grid">
+  <div class="card"><div class="label">Initiatives</div><div class="value">4</div></div>
+  <div class="card"><div class="label">Estimated spend</div><div class="value">$6,100,000</div></div>
+  <div class="card"><div class="label">Capacity demand</div><div class="value">189</div></div>
+  <div class="card"><div class="label">Governance holds</div><div class="value">1</div></div>
+</div>
+<h2>Scored Portfolio View</h2>
+<table>
+<thead><tr><th>Rank</th><th>ID</th><th>Initiative</th><th>Category</th><th>Status</th><th>Score</th><th>Confidence</th><th>Recommendation</th><th>Flags</th></tr></thead>
+<tbody>
+
+        <tr>
+          <td>1</td>
+          <td>P-003</td>
+          <td>Field Service Scheduling Automation</td>
+          <td>Operational Efficiency</td>
+          <td>Discretionary</td>
+          <td><div class="bar"><span style="width:80.0%"></span></div><span class="score">80.0</span></td>
+          <td>High</td>
+          <td>Prioritize</td>
+          <td>None</td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>P-002</td>
+          <td>Self-Service Revenue Portal Expansion</td>
+          <td>Growth / Revenue</td>
+          <td>Discretionary</td>
+          <td><div class="bar"><span style="width:79.0%"></span></div><span class="score">79.0</span></td>
+          <td>High</td>
+          <td>Board trade-off - high value but material funding or capacity burden</td>
+          <td>None</td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>P-001</td>
+          <td>Data Retention Compliance Remediation</td>
+          <td>Regulatory / Mandatory</td>
+          <td>Mandatory</td>
+          <td><div class="bar"><span style="width:71.0%"></span></div><span class="score">71.0</span></td>
+          <td>Medium</td>
+          <td>Mandatory commitment - protect capacity and sequence through governance</td>
+          <td>None</td>
+        </tr>
+        
+        <tr>
+          <td>4</td>
+          <td>P-004</td>
+          <td>Data Lake Migration Foundation</td>
+          <td>Technology Foundation</td>
+          <td>Unknown</td>
+          <td><div class="bar"><span style="width:57.0%"></span></div><span class="score">57.0</span></td>
+          <td>Low</td>
+          <td>Hold for governance clarity</td>
+          <td>Missing or unclear sponsor; Missing or unclear decision authority; Missing or unclear mandatory status</td>
+        </tr>
+        
+</tbody>
+</table>
+<h2>Scoring Criteria</h2>
+<table>
+<thead><tr><th>Criterion</th><th>Weight</th><th>Description</th></tr></thead>
+<tbody><tr><td>Strategic alignment</td><td>25%</td><td>How directly the initiative supports declared strategy.</td></tr><tr><td>Financial or mission value</td><td>15%</td><td>Expected financial, mission, or enterprise benefit.</td></tr><tr><td>Customer or operational impact</td><td>15%</td><td>Degree of external/customer or internal operating impact.</td></tr><tr><td>Risk reduction or compliance criticality</td><td>15%</td><td>Value of reducing or addressing risk and compliance exposure.</td></tr><tr><td>Dependency enablement</td><td>10%</td><td>Extent to which the initiative enables other portfolio work.</td></tr><tr><td>Readiness and confidence</td><td>10%</td><td>Confidence in scope, sponsorship, estimates, approach, and readiness.</td></tr><tr><td>Effort or cost feasibility</td><td>10%</td><td>Affordability and execution feasibility; higher is more feasible.</td></tr></tbody>
+</table>
+<div class="callout">
+<strong>Human decisions required:</strong> protect mandatory compliance capacity, decide whether to sequence the high-value discretionary work under current budget and capacity constraints, and resolve sponsor/decision-authority gaps before considering P-004 for funding.
+</div>
+<div class="footer">Model version: default-v1 | Generated: 2026-05-27T20:25:45.218443+00:00</div>
+</body>
+</html>

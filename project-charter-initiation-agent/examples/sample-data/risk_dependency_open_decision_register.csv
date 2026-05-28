@@ -1,0 +1,6 @@
+type,item,owner,impact,timing,mitigation_or_next_step,status
+Risk,Source data quality is insufficient for reliable executive reporting,Technology Owner,Manual reconciliation continues,Planning,Profile data and label confidence in dashboard,Open
+Risk,Pilot expands into full onboarding transformation,Sponsor,Budget and timeline become unmanageable,Anytime,Use scope exclusions and formal change control,Open
+Dependency,CRM field mapping,Sales Operations,Dashboard requirements cannot be finalized,Planning weeks 1-2,Confirm field owner and mapping session,Open
+Dependency,Security review for customer-identifiable data,Security Governance,Dashboard release may be delayed,Before build completion,Begin review during planning,Open
+Open Decision,Customer names vs anonymized account IDs,Sponsor and Security Governance,Affects design and security requirements,Before design signoff,Decision required,Open

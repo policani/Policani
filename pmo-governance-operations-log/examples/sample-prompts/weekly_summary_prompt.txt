@@ -1,0 +1,13 @@
+Review the synthetic PMO operations log and produce:
+1. executive summary
+2. decisions needed
+3. overdue or blocked actions
+4. stakeholder follow-ups
+5. escalation candidates
+6. risks and dependencies
+7. weak status signals
+8. project plan update recommendations
+9. next-meeting prep
+10. clarification questions
+
+Keep decisions human-owned and frame recommendations as advisory.

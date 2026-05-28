@@ -1,0 +1,14 @@
+flowchart TD
+    A[Early Idea or Approved Business Case] --> B[Artifact Intake]
+    B --> C[Evidence Inventory]
+    C --> D[Adaptive Interview]
+    D --> E{Charter Ready?}
+    E -- No --> F[Clarify Sponsor, Scope, Decisions, Measures]
+    F --> D
+    E -- Yes --> G[Draft Project Charter]
+    G --> H[Quality Review Gate]
+    H --> I{Sponsor Ready?}
+    I -- No --> J[Revise Scope, Governance, Risks, Dependencies]
+    J --> G
+    I -- Yes --> K[Human Sponsor Review]
+    K --> L[Planning and Execution Handoff]

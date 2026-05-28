@@ -1,0 +1,1 @@
+Here are rough governance meeting notes. Extract decisions, deferred decisions, actions, owners, due dates, risks, dependencies, escalation candidates, follow-up meetings, project plan update recommendations, and carry-forward items. Flag anything missing an owner, date, rationale, or next step.
