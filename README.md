@@ -37,31 +37,31 @@ I am building this space around public-safe examples such as:
 - AI-assisted project and portfolio documentation workflows
 - Job-search and career-operations workflow architecture
 
-## Featured PMO & Portfolio Systems
+## Featured Standalone Repositories
 
-[AI Opportunity Intelligence Review System](ai-opportunity-intelligence-review-system/)
+[AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system)
 
 - An operating system for decomposing rough AI ideas into intelligence architecture, proof requirements, governance controls, and build/buy/wait routes before teams spend time on demos, vendors, proofs of concept, or delivery planning.
 - It demonstrates an intelligence review layer for AI portfolio management with a flat ChatGPT Project runtime, synthetic sample data, Mermaid workflows, local tooling, and human accountability guardrails.
 
-[Business Case System](business-case-system/)
+[Business Case System](https://github.com/policani/business-case-system)
 
 - An agent-assisted business case development system for turning early ideas, notes, spreadsheets, project plans, and source documents into decision-ready business cases.
 - It interviews the user, ingests supporting artifacts, challenges weak problem framing, strengthens incomplete ideas, tests assumptions through a critical review council, and generates structured Markdown, richly formatted DOCX, and HTML outputs.
 - It demonstrates how practical AI can improve business decision quality without replacing human judgment, sponsor accountability, financial scrutiny, or governance discipline.
 
-[Project Charter Initiation Agent](project-charter-initiation-agent/)
+[Project Charter Initiation Agent](https://github.com/policani/project-charter-initiation-agent)
 
 - A PMBOK Guide-aligned, agent-assisted project initiation system for developing sponsor-ready project charters from business cases, notes, spreadsheets, project plans, stakeholder inputs, and source artifacts.
 - The workflow acts like a senior initiation and governance advisor: it challenges vague scope, clarifies ownership and decision rights, separates objectives from deliverables, surfaces assumptions, risks, dependencies, and open decisions, and produces polished Markdown, HTML, and DOCX outputs ready for review.
 
-[Portfolio Prioritization Scoring Agent](portfolio-prioritization-scoring-agent/)
+[Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent)
 
 - A human-governed, AI-assisted portfolio decision-support system for evaluating approved projects and programs through transparent weighted scoring, portfolio metadata, strategic themes, constraints, risks, dependencies, and ownership.
 - The workflow helps stakeholders define scoring criteria, weights, governance cadence, budget and capacity constraints, mandatory-versus-discretionary work, portfolio KPIs, and executive decision views.
 - It demonstrates how AI can improve portfolio prioritization, scenario review, and decision readiness without turning funding, sequencing, or tradeoff decisions over to an autonomous tool.
 
-[PMO Governance Operations Log](pmo-governance-operations-log/)
+[PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log)
 
 - A human-governed, AI-assisted PMO worklog system for turning rough notes, stakeholder updates, blockers, decisions, risks, scheduling issues, and follow-up items into usable governance artifacts.
 - The workflow helps a PMO or portfolio lead classify weekly operating signals, prepare governance meetings, draft stakeholder follow-ups, build executive air-support briefs, recommend project-plan updates, and close out meetings with clear decisions, actions, owners, due dates, unresolved items, and carry-forward topics.
@@ -69,17 +69,17 @@ I am building this space around public-safe examples such as:
 
 ## Featured AI Workflow Systems
 
-[AI Prose-Pattern Detector](ai-prose-pattern-detector/)
+[AI Prose-Pattern Detector](https://github.com/policani/ai-prose-pattern-detector)
 
 - A prose QA toolkit for finding AI-shaped writing patterns, condensed expert language, formulaic contrast, and generic business prose.
 - It demonstrates agent-readable quality gates, centralized settings, reusable rubrics, and human-in-the-loop editing.
 
-[Job Search Workbench](job-search-workbench/)
+[Job Search Workbench](https://github.com/policani/Job-Search-Workbench)
 
 - A local-first workflow project for job seekers who want to scan public employer job boards, filter roles by title, location, salary, posting age, and job-description evidence, then export a review list.
 - It demonstrates workflow design for messy external data, source-health diagnostics, and human-in-the-loop career operations.
 
-[Resume Evidence Engine](resume-evidence-engine/)
+[Resume Evidence Engine](https://github.com/policani/resume-evidence-engine)
 
 - An evidence-bound workflow project for job seekers who want AI-assisted help with role scoring, resume drafting, cover letters, proof narratives, local browser builders, and Markdown-to-DOCX handoff.
 - It demonstrates practical AI workflow design with source-of-truth files, guardrails, reusable templates, fictional sample outputs, and human review.
