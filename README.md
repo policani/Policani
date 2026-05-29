@@ -65,6 +65,12 @@ These repositories are public-safe examples of AI-assisted operating systems, no
 - An operating system for decomposing rough AI ideas into intelligence architecture, proof requirements, governance controls, and build/buy/wait routes before teams spend time on demos, vendors, proofs of concept, or delivery planning.
 - It demonstrates an intelligence review layer for AI portfolio management with a flat ChatGPT Project runtime, synthetic sample data, Mermaid workflows, local tooling, and human accountability guardrails.
 
+[AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system)
+
+- A lightweight AI artifact governance system for classifying, governing, promoting, demoting, or retiring AI tools, scripts, dashboards, agents, automations, and workflow artifacts that already exist before the business has formally approved them.
+- The workflow helps leaders build a prototype commons registry, classify artifacts by production-readiness, screen reliance risk, review ownership, data, systems, permissions, and value signal, then route each artifact to the right next step.
+- It demonstrates a practical governance layer between informal experimentation and formal business reliance, helping teams preserve useful innovation without letting unsupported tools quietly become production dependencies.
+
 [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent)
 
 - A human-governed, AI-assisted portfolio decision-support system for evaluating approved projects and programs through transparent weighted scoring, portfolio metadata, strategic themes, constraints, risks, dependencies, and ownership.
