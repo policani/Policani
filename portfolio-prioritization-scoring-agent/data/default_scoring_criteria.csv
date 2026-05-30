@@ -1,8 +1,0 @@
-criterion_id,criterion_name,weight,scale_anchor_1,scale_anchor_3,scale_anchor_5,description
-strategic_alignment,Strategic alignment,0.25,Weak or unclear tie to strategy,Supports one declared theme,Directly advances top strategic priority,How directly the initiative supports declared strategy.
-financial_value,Financial or mission value,0.15,Little measurable value,Moderate value or cost avoidance,"Material revenue, savings, avoidance, or mission value","Expected financial, mission, or enterprise benefit."
-customer_operational_impact,Customer or operational impact,0.15,Limited visible impact,Moderate customer or operating benefit,"Broad or material customer, employee, or operating impact",Degree of external/customer or internal operating impact.
-risk_compliance_criticality,Risk reduction or compliance criticality,0.15,Low risk reduction,Meaningful risk reduction,"Critical legal, regulatory, safety, security, or audit need",Value of reducing or addressing risk and compliance exposure.
-dependency_enablement,Dependency enablement,0.10,Standalone or low enabling value,Enables some related work,Unlocks or protects multiple important initiatives,Extent to which the initiative enables other portfolio work.
-readiness_confidence,Readiness and confidence,0.10,Poorly defined or weakly sponsored,Directionally clear with moderate confidence,"Strong sponsor, scope, estimates, and execution confidence","Confidence in scope, sponsorship, estimates, approach, and readiness."
-effort_feasibility,Effort or cost feasibility,0.10,High burden or poor feasibility,Moderate burden and feasible,Low burden or highly feasible,Affordability and execution feasibility; higher is more feasible.
