@@ -9,9 +9,23 @@ This GitHub profile is a public-safe portfolio of how I structure that kind of w
 ## Start Here
 
 * Portfolio site: [policani.github.io](https://policani.github.io)
-* Portfolio artifacts: [Policani/wiki source](https://github.com/policani/Policani/tree/main/wiki)
+* Portfolio artifacts: [source pages](https://github.com/policani/Policani/tree/main/wiki)
 * Anonymized governance artifacts: [operating-patterns](https://github.com/policani/operating-patterns)
 * LinkedIn: [linkedin.com/in/marcpolicani](https://www.linkedin.com/in/marcpolicani)
+
+## Portfolio Artifacts
+
+Because the GitHub Wiki backing repository is not initialized yet, the portfolio artifacts are published directly in this profile repository under [`wiki/`](wiki/). This keeps the material visible and reviewable without depending on the unused GitHub Wiki feature.
+
+Start with:
+
+* [Portfolio Artifact Map](wiki/Portfolio-Artifact-Map.md)
+* [Governance Frameworks](wiki/Governance-Frameworks.md)
+* [Operating Models](wiki/Operating-Models.md)
+* [Playbooks and Templates](wiki/Playbooks-and-Templates.md)
+* [Lessons Learned](wiki/Lessons-Learned.md)
+* [AI-Safe Workflow Design](wiki/AI-Safe-Workflow-Design.md)
+* [Public Safety](wiki/Public-Safety.md)
 
 ## How To Read This Portfolio
 
