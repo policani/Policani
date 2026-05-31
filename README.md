@@ -9,7 +9,7 @@ This GitHub profile is a public-safe portfolio of how I structure that kind of w
 ## Start Here
 
 * Portfolio site: [policani.github.io](https://policani.github.io)
-* Portfolio artifacts wiki: [Policani/wiki](https://github.com/policani/Policani/wiki)
+* Portfolio artifacts: [Policani/wiki source](https://github.com/policani/Policani/tree/main/wiki)
 * Anonymized governance artifacts: [operating-patterns](https://github.com/policani/operating-patterns)
 * LinkedIn: [linkedin.com/in/marcpolicani](https://www.linkedin.com/in/marcpolicani)
 
