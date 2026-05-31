@@ -10,7 +10,6 @@ This GitHub profile is a public-safe portfolio of how I structure that kind of w
 
 * Portfolio site: [policani.github.io](https://policani.github.io)
 * Operating-pattern library: [operating-patterns](https://github.com/policani/operating-patterns)
-* Profile repository: [Policani](https://github.com/policani/Policani)
 * LinkedIn: [linkedin.com/in/marcpolicani](https://www.linkedin.com/in/marcpolicani)
 
 ## How To Read This Portfolio
@@ -103,16 +102,6 @@ Start with:
 
 These modules show how early ideas become business cases, and how approved intent becomes project charters with scope, owners, assumptions, risks, dependencies, governance rhythm, and planning handoff.
 
-### If the useful proof is narrative and evidence discipline
-
-Start with:
-
-* [Resume Evidence Engine](https://github.com/policani/resume-evidence-engine)
-* [Jobs Scanner](https://github.com/policani/jobs-scanner)
-* [AI Prose Pattern Detector](https://github.com/policani/ai-prose-pattern-detector)
-
-These are real career evidence workflow systems, not PMO proof-of-concept modules. They demonstrate source-truth design, fit scoring, evidence routing, hard stops, prose QA, document handoff, and human review for high-stakes personal narrative work. The transferable pattern is evidence-bound workflow architecture, not generic content generation.
-
 ## Proof Themes
 
 The underlying professional evidence supports these themes:
@@ -124,17 +113,28 @@ The underlying professional evidence supports these themes:
 * Used practical AI to improve portfolio hygiene, documentation quality, dependency review, meeting intelligence, content sourcing, scoring consistency, and workflow discipline while keeping accountability with people.
 * Turned messy delivery environments into clearer systems of record, ownership, decision cadence, and follow-through.
 
-## Repository Map
+## Proof-of-Concept Operating Modules
 
-| Lane | Repositories |
+Each module is designed to stand alone, but the stronger story is how they hand cleaner evidence into the next decision point. These are public-safe examples of PMO, portfolio, readiness, governance, and decision-support design: standalone starting points that can be adapted, extended, or combined for real operating needs.
+
+| Module lane | Repositories |
 | --- | --- |
 | PMO formation and signal quality | [PPMO Formation Kit](https://github.com/policani/ppmo-formation-kit), [Portfolio Signal Quality Auditor](https://github.com/policani/portfolio-signal-quality-auditor), [Portfolio Intake and Readiness Triage System](https://github.com/policani/portfolio-intake-readiness-triage-system) |
-| Portfolio decisions and sequencing | [Executive Portfolio Review Pack Builder](https://github.com/policani/executive-portfolio-review-pack-builder), [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent), [Portfolio Capacity and Sequencing Planner](https://github.com/policani/portfolio-capacity-sequencing-planner) |
-| Authorization and initiation | [Business Case System](https://github.com/policani/business-case-system), [Project Charter Initiation Agent](https://github.com/policani/project-charter-initiation-agent) |
-| Delivery readiness, controls, and value | [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log), [Release Readiness and UAT Governance Pack](https://github.com/policani/release-readiness-uat-governance-pack), [Controls and Exposure Governance Toolkit](https://github.com/policani/controls-exposure-governance-toolkit), [Value Realization Governance Ledger](https://github.com/policani/value-realization-governance-ledger) |
 | AI operating governance | [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system), [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system), [Operating Patterns](https://github.com/policani/operating-patterns) |
+| Authorization and initiation | [Business Case System](https://github.com/policani/business-case-system), [Project Charter Initiation Agent](https://github.com/policani/project-charter-initiation-agent) |
+| Portfolio decisions and sequencing | [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent), [Portfolio Capacity and Sequencing Planner](https://github.com/policani/portfolio-capacity-sequencing-planner), [Executive Portfolio Review Pack Builder](https://github.com/policani/executive-portfolio-review-pack-builder) |
+| Delivery readiness, controls, and value | [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log), [Release Readiness and UAT Governance Pack](https://github.com/policani/release-readiness-uat-governance-pack), [Controls and Exposure Governance Toolkit](https://github.com/policani/controls-exposure-governance-toolkit), [Value Realization Governance Ledger](https://github.com/policani/value-realization-governance-ledger) |
 | Innovation, partner, and external delivery governance | Covered in [Operating Patterns](https://github.com/policani/operating-patterns) as generalized capability material rather than standalone product modules. |
-| Evidence and prose workflow systems | [Resume Evidence Engine](https://github.com/policani/resume-evidence-engine), [Jobs Scanner](https://github.com/policani/jobs-scanner), [AI Prose Pattern Detector](https://github.com/policani/ai-prose-pattern-detector) |
+
+## Free Career and Writing Tools
+
+These are free public tools and proofs of concept, separate from the PMO and portfolio operating-system examples. They are practical utilities for job-search workflow, career documentation, and writing review.
+
+| Tool | What it is |
+| --- | --- |
+| [Resume Evidence Engine](https://github.com/policani/resume-evidence-engine) | A career documentation tool that grounds AI-assisted drafting in actual career evidence, keeping pivots defensible while producing role-fit notes, resume drafts, cover letters, proof narratives, and DOCX handoff. |
+| [Jobs Scanner](https://github.com/policani/jobs-scanner) | A local-first job-search utility for collecting, filtering, and ranking public job postings by fit, posting signal, salary, location, source health, and age. |
+| [AI Prose Pattern Detector](https://github.com/policani/ai-prose-pattern-detector) | A writing review tool for spotting AI-shaped phrasing, generic business language, and revision opportunities. |
 
 ## How I Work
 
