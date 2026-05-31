@@ -4,17 +4,20 @@ I build operating systems for complex work: portfolio governance, executive cade
 
 My center of gravity is portfolio, program, project, and operations leadership. The work usually starts when leaders can see activity but cannot yet trust the signal: demand is scattered, ownership is unclear, readiness is inconsistent, tradeoffs are not visible, and decisions are being made from status theater instead of usable evidence.
 
-This GitHub profile is a public-safe portfolio of how I structure that kind of work. It is not a software engineering portfolio and it is not a claim that these modules are deployed production systems. The repositories show operating-model design, evidence-bound workflow architecture, governance patterns, templates, and synthetic examples of AI-assisted leadership work.
+This GitHub profile is a public-safe portfolio of how I structure that kind of work. It is not a software engineering portfolio and it is not a claim that these modules are deployed production systems. The repositories show governance frameworks, operating models, playbooks, templates, lessons learned, and anonymized examples of AI-assisted leadership work.
 
 ## Start Here
 
 * Portfolio site: [policani.github.io](https://policani.github.io)
-* Operating-pattern library: [operating-patterns](https://github.com/policani/operating-patterns)
+* Portfolio artifacts wiki: [Policani/wiki](https://github.com/policani/Policani/wiki)
+* Anonymized governance artifacts: [operating-patterns](https://github.com/policani/operating-patterns)
 * LinkedIn: [linkedin.com/in/marcpolicani](https://www.linkedin.com/in/marcpolicani)
 
 ## How To Read This Portfolio
 
 Evaluate the work as evidence of operating judgment.
+
+The public artifacts are derived from real operating work, then scrubbed and generalized so the useful parts can be reviewed without exposing employer names, client details, internal systems, confidential figures, or proprietary process language. Read them as anonymized portfolio artifacts first and reusable operating patterns second.
 
 Look for how the systems:
 
@@ -81,17 +84,17 @@ Start with:
 
 * [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system)
 * [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system)
-* [Operating Patterns](https://github.com/policani/operating-patterns)
+* [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns)
 
-These modules and patterns show how rough AI ideas, vendor claims, prototypes, scripts, dashboards, agents, and informal workflow artifacts can be routed through proof, reliance risk, value signal, ownership, and human review before the business depends on them.
+These modules and artifacts show how rough AI ideas, vendor claims, prototypes, scripts, dashboards, agents, and informal workflow artifacts can be routed through proof, reliance risk, value signal, ownership, and human review before the business depends on them.
 
 ### If innovation or partner ecosystems need governance
 
 Start with:
 
-* [Operating Patterns](https://github.com/policani/operating-patterns)
+* [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns)
 
-Innovation portfolio governance and partner ecosystem governance are supported capability areas. They are currently represented through generalized operating patterns and professional evidence themes rather than standalone product modules in this local portfolio set.
+Innovation portfolio governance and partner ecosystem governance are supported capability areas. They are currently represented through anonymized governance artifacts and professional evidence themes rather than standalone product modules in this local portfolio set.
 
 ### If the work needs authorization and handoff
 
@@ -120,11 +123,11 @@ Each module is designed to stand alone, but the stronger story is how they hand 
 | Module lane | Repositories |
 | --- | --- |
 | PMO formation and signal quality | [PPMO Formation Kit](https://github.com/policani/ppmo-formation-kit), [Portfolio Signal Quality Auditor](https://github.com/policani/portfolio-signal-quality-auditor), [Portfolio Intake and Readiness Triage System](https://github.com/policani/portfolio-intake-readiness-triage-system) |
-| AI operating governance | [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system), [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system), [Operating Patterns](https://github.com/policani/operating-patterns) |
+| AI operating governance | [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system), [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system), [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns) |
 | Authorization and initiation | [Business Case System](https://github.com/policani/business-case-system), [Project Charter Initiation Agent](https://github.com/policani/project-charter-initiation-agent) |
 | Portfolio decisions and sequencing | [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent), [Portfolio Capacity and Sequencing Planner](https://github.com/policani/portfolio-capacity-sequencing-planner), [Executive Portfolio Review Pack Builder](https://github.com/policani/executive-portfolio-review-pack-builder) |
 | Delivery readiness, controls, and value | [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log), [Release Readiness and UAT Governance Pack](https://github.com/policani/release-readiness-uat-governance-pack), [Controls and Exposure Governance Toolkit](https://github.com/policani/controls-exposure-governance-toolkit), [Value Realization Governance Ledger](https://github.com/policani/value-realization-governance-ledger) |
-| Innovation, partner, and external delivery governance | Covered in [Operating Patterns](https://github.com/policani/operating-patterns) as generalized capability material rather than standalone product modules. |
+| Innovation, partner, and external delivery governance | Covered in [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns) as generalized capability material rather than standalone product modules. |
 
 ## Free Career and Writing Tools
 
