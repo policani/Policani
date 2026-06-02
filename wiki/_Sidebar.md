@@ -12,5 +12,6 @@
 ## Source Libraries
 
 - [GitHub Profile](https://github.com/policani)
-- [Portfolio Site](https://policani.github.io)
+- [Portfolio Site](https://policani.net)
+- [Messy Demand to Executive Review](https://policani.net/journeys/messy-demand-to-executive-review.html)
 - [Operating Patterns Source](https://github.com/policani/operating-patterns)

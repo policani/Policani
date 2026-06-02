@@ -2,9 +2,11 @@
 
 This map translates the portfolio into artifact categories that hiring managers, recruiters, PMO leaders, portfolio leaders, and AI operations teams are more likely to recognize.
 
+For the shortest public route, start at [policani.net](https://policani.net). For a concrete walkthrough, use the [messy demand to executive review](https://policani.net/journeys/messy-demand-to-executive-review.html) journey.
+
 ## Governance frameworks
 
-Frameworks for structuring demand, decision rights, prioritization, readiness, value, controls, and follow-through.
+Frameworks for structuring demand, decision rights, prioritization, delivery readiness, value, controls, and follow-through.
 
 Representative public-safe examples:
 

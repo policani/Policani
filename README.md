@@ -2,11 +2,11 @@
 
 Principal / Director-level portfolio, PMO, and executive operations leader for organizations that need clearer governance, decision cadence, delivery readiness, portfolio signal, and AI-assisted operating discipline.
 
-I help CIO, CFO, COO, CTO, and CMO-sponsored teams turn scattered demand into structured intake, sequencing, readiness gates, executive review, value realization, and follow-through.
+I help CIO, CFO, COO, CTO, and CMO-sponsored teams turn scattered demand into structured intake, sequencing, delivery readiness, executive review, value realization, and follow-through.
 
 My center of gravity is portfolio, program, PMO, and strategic operations leadership. The work usually starts when leaders can see activity but cannot yet trust the signal: demand is scattered, ownership is unclear, readiness is inconsistent, tradeoffs are not visible, and decisions are being made from status theater instead of usable evidence.
 
-This GitHub profile is a public-safe portfolio of how I structure that kind of work. It is not a software engineering portfolio and it is not a claim that these modules are deployed production systems. The repositories show governance frameworks, operating models, playbooks, templates, lessons learned, and anonymized examples of AI-assisted leadership work.
+This GitHub profile is a public-safe portfolio of how I structure that kind of work. The repositories show governance frameworks, operating models, playbooks, templates, lessons learned, and anonymized examples of AI-assisted leadership work. Evaluate them as public portfolio exhibits, not as deployed production systems or software engineering ownership claims.
 
 Strongest hiring lanes:
 
@@ -18,10 +18,21 @@ Strongest hiring lanes:
 
 ## Start Here
 
-* Portfolio site: [policani.github.io](https://policani.github.io)
+* Portfolio site: [policani.net](https://policani.net)
 * Portfolio artifacts: [source pages](https://github.com/policani/Policani/tree/main/wiki)
 * Anonymized governance artifacts: [operating-patterns](https://github.com/policani/operating-patterns)
+* Flagship journey: [messy demand to executive review](https://policani.net/journeys/messy-demand-to-executive-review.html)
 * LinkedIn: [linkedin.com/in/marcpolicani](https://www.linkedin.com/in/marcpolicani)
+
+## Operating Phase Route
+
+Read the portfolio as a governance route around delivery:
+
+1. **Intake** - name the work, owner, sponsor signal, problem, and route.
+2. **Tradeoffs** - compare priority, sequencing, capacity, dependencies, and risk.
+3. **Funding** - move intent through investment logic and authorization.
+4. **Delivery readiness** - make build/test evidence, controls, UAT, signoffs, blockers, and launch gates reviewable.
+5. **Value** - track outcomes, realization confidence, learning, and follow-through.
 
 ## Portfolio Artifacts
 
@@ -50,7 +61,7 @@ Look for how the systems:
 * Make readiness, capacity, controls, and value realization visible before problems become late-stage surprises.
 * Use AI for structure, synthesis, review, classification, drafting, and repeatability without handing over accountability.
 * Separate public examples, runtime instructions, templates, source material, generated outputs, and review guardrails.
-* Demonstrate capability through synthetic or generalized examples instead of exposing employer, client, financial, or proprietary details.
+* Demonstrate capability through synthetic or generalized examples while protecting employer, client, financial, and proprietary details.
 
 ## Positioning
 
@@ -58,9 +69,9 @@ The strongest through-line is governed decision support.
 
 I am strongest where organizations need:
 
-* Principal- or Director-level PMO, EPMO, PPMO, portfolio governance, or program governance that is useful rather than ceremonial.
+* Principal- or Director-level PMO, EPMO, PPMO, portfolio governance, or program governance with practical operating value.
 * Executive operating rhythm, decision cadence, tradeoff review, sponsor alignment, and follow-through.
-* Intake, prioritization, scoring, sequencing, capacity visibility, readiness gates, and portfolio signal quality.
+* Intake, prioritization, scoring, sequencing, capacity visibility, delivery readiness, and portfolio signal quality.
 * Revenue technology, finance systems, release readiness, UAT governance, controls, exposure, or value realization discipline.
 * Partner ecosystem, provider-network, launch-readiness, GTM, field-readiness, or external delivery governance.
 * AI-assisted portfolio operations where business value, human review, evidence, risk, and adoption discipline matter more than tool novelty.
@@ -76,9 +87,10 @@ Important boundary: I do not present this as CEO, VP, GM, formal Chief of Staff,
 
 Start with:
 
-* [PPMO Formation Kit](https://github.com/policani/ppmo-formation-kit)
-* [Portfolio Signal Quality Auditor](https://github.com/policani/portfolio-signal-quality-auditor)
-* [Portfolio Intake and Readiness Triage System](https://github.com/policani/portfolio-intake-readiness-triage-system)
+* [Set up the PPMO intake lane](https://github.com/policani/ppmo-formation-kit)
+* [Audit portfolio signal quality](https://github.com/policani/portfolio-signal-quality-auditor)
+* [Triage intake readiness](https://github.com/policani/portfolio-intake-readiness-triage-system)
+* [Follow messy demand to executive review](https://policani.net/journeys/messy-demand-to-executive-review.html)
 
 These modules show how governance structure, taxonomy, intake, owners, sponsors, readiness gaps, and route decisions become visible before work is treated as approved or active.
 
@@ -86,9 +98,9 @@ These modules show how governance structure, taxonomy, intake, owners, sponsors,
 
 Start with:
 
-* [Executive Portfolio Review Pack Builder](https://github.com/policani/executive-portfolio-review-pack-builder)
-* [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent)
-* [Portfolio Capacity and Sequencing Planner](https://github.com/policani/portfolio-capacity-sequencing-planner)
+* [Build executive review packs](https://github.com/policani/executive-portfolio-review-pack-builder)
+* [Score priority and tradeoffs](https://github.com/policani/portfolio-prioritization-scoring-agent)
+* [Plan capacity and sequencing](https://github.com/policani/portfolio-capacity-sequencing-planner)
 
 These modules show how portfolio data becomes decision-ready: scoring criteria, constraints, dependencies, capacity pressure, risks, tradeoffs, decision asks, and follow-up registers.
 
@@ -96,10 +108,10 @@ These modules show how portfolio data becomes decision-ready: scoring criteria, 
 
 Start with:
 
-* [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log)
-* [Release Readiness and UAT Governance Pack](https://github.com/policani/release-readiness-uat-governance-pack)
-* [Controls and Exposure Governance Toolkit](https://github.com/policani/controls-exposure-governance-toolkit)
-* [Value Realization Governance Ledger](https://github.com/policani/value-realization-governance-ledger)
+* [Track governance operations](https://github.com/policani/pmo-governance-operations-log)
+* [Prove delivery readiness](https://github.com/policani/release-readiness-uat-governance-pack)
+* [Review controls and exposure](https://github.com/policani/controls-exposure-governance-toolkit)
+* [Track value realization](https://github.com/policani/value-realization-governance-ledger)
 
 These modules show how decisions, blockers, evidence gaps, signoffs, control owners, exposure, value claims, and realization confidence can be tracked without pretending the tool replaces accountable owners.
 
@@ -107,9 +119,9 @@ These modules show how decisions, blockers, evidence gaps, signoffs, control own
 
 Start with:
 
-* [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system)
-* [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system)
-* [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns)
+* [Review AI opportunities](https://github.com/policani/ai-opportunity-intelligence-review-system)
+* [Govern AI artifact lifecycle](https://github.com/policani/ai-artifact-lifecycle-governance-system)
+* [Inspect governance patterns](https://github.com/policani/operating-patterns)
 
 These modules and artifacts show how rough AI ideas, vendor claims, prototypes, scripts, dashboards, agents, and informal workflow artifacts can be routed through proof, reliance risk, value signal, ownership, and human review before the business depends on them.
 
@@ -117,16 +129,16 @@ These modules and artifacts show how rough AI ideas, vendor claims, prototypes, 
 
 Start with:
 
-* [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns)
+* [Inspect governance patterns](https://github.com/policani/operating-patterns)
 
-Innovation portfolio governance and partner ecosystem governance are supported capability areas. They are currently represented through anonymized governance artifacts and professional evidence themes rather than standalone product modules in this local portfolio set.
+Innovation portfolio governance and partner ecosystem governance are supported capability areas. The current proof sits in anonymized governance artifacts and professional evidence themes. A standalone product module would be a later packaging decision.
 
 ### If the work needs authorization and handoff
 
 Start with:
 
-* [Business Case System](https://github.com/policani/business-case-system)
-* [Project Charter Initiation Agent](https://github.com/policani/project-charter-initiation-agent)
+* [Build business cases](https://github.com/policani/business-case-system)
+* [Initiate project charters](https://github.com/policani/project-charter-initiation-agent)
 
 These modules show how early ideas become business cases, and how approved intent becomes project charters with scope, owners, assumptions, risks, dependencies, governance rhythm, and planning handoff.
 
@@ -152,7 +164,7 @@ Each module is designed to stand alone, but the stronger story is how they hand 
 | Authorization and initiation | [Business Case System](https://github.com/policani/business-case-system), [Project Charter Initiation Agent](https://github.com/policani/project-charter-initiation-agent) |
 | Portfolio decisions and sequencing | [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent), [Portfolio Capacity and Sequencing Planner](https://github.com/policani/portfolio-capacity-sequencing-planner), [Executive Portfolio Review Pack Builder](https://github.com/policani/executive-portfolio-review-pack-builder) |
 | Delivery readiness, controls, and value | [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log), [Release Readiness and UAT Governance Pack](https://github.com/policani/release-readiness-uat-governance-pack), [Controls and Exposure Governance Toolkit](https://github.com/policani/controls-exposure-governance-toolkit), [Value Realization Governance Ledger](https://github.com/policani/value-realization-governance-ledger) |
-| Innovation, partner, and external delivery governance | Covered in [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns) as generalized capability material rather than standalone product modules. |
+| Innovation, partner, and external delivery governance | Covered in [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns) as generalized capability material. A standalone module would be a later packaging decision. |
 
 ## Free Career and Writing Tools
 
@@ -167,7 +179,7 @@ These are free public tools and proofs of concept, separate from the PMO and por
 ## How I Work
 
 * Start with the operating problem, not the artifact.
-* Make ownership, constraints, decisions, risks, dependencies, readiness, value, and tradeoffs visible.
+* Make ownership, constraints, decisions, risks, dependencies, delivery readiness, value, and tradeoffs visible.
 * Separate demand, priority, readiness, and execution so leaders can see what is real.
 * Clean signal before asking for portfolio decisions.
 * Build only enough process to create trust, decision quality, and follow-through.
@@ -181,6 +193,6 @@ The public materials are generalized, synthetic, or scrubbed. They do not includ
 
 ## Connect
 
-* Portfolio: [https://policani.github.io](https://policani.github.io)
+* Portfolio: [https://policani.net](https://policani.net)
 * GitHub: [https://github.com/policani](https://github.com/policani)
 * LinkedIn: [https://www.linkedin.com/in/marcpolicani](https://www.linkedin.com/in/marcpolicani)

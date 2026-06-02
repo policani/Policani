@@ -6,6 +6,8 @@ The work is drawn from real portfolio, PMO, program governance, executive decisi
 
 ## Start here
 
+- [Portfolio site](https://policani.net)
+- [Flagship journey: messy demand to executive review](https://policani.net/journeys/messy-demand-to-executive-review.html)
 - [Portfolio Artifact Map](Portfolio-Artifact-Map)
 - [Governance Frameworks](Governance-Frameworks)
 - [Operating Models](Operating-Models)
@@ -16,11 +18,11 @@ The work is drawn from real portfolio, PMO, program governance, executive decisi
 
 ## How to read this portfolio
 
-These artifacts are not generic open-source documentation and not employer case studies. They are public-safe renderings of operating judgment:
+Read these artifacts as public-safe renderings of operating judgment:
 
 - How scattered demand becomes structured intake, ownership, route decisions, risks, dependencies, and follow-through.
 - How executive tradeoffs become visible enough to discuss, sequence, fund, pause, or reject.
-- How readiness, controls, value, and evidence are separated from status theater.
+- How delivery readiness, controls, value, and evidence are separated from status theater.
 - How AI can support synthesis, classification, drafting, review, and repeatability while humans retain accountability.
 
 The companion source repository is [operating-patterns](https://github.com/policani/operating-patterns). It uses a pattern-library format because the original operating work cannot be shown directly.
