@@ -1,10 +1,20 @@
 # Marco Policani
 
-I build operating systems for complex work: portfolio governance, executive cadence, PMO formation, delivery readiness, value realization, controls, partner ecosystems, and practical AI-assisted workflows.
+Principal / Director-level portfolio, PMO, and executive operations leader for organizations that need clearer governance, decision cadence, delivery readiness, portfolio signal, and AI-assisted operating discipline.
 
-My center of gravity is portfolio, program, project, and operations leadership. The work usually starts when leaders can see activity but cannot yet trust the signal: demand is scattered, ownership is unclear, readiness is inconsistent, tradeoffs are not visible, and decisions are being made from status theater instead of usable evidence.
+I help CIO, CFO, COO, CTO, and CMO-sponsored teams turn scattered demand into structured intake, sequencing, readiness gates, executive review, value realization, and follow-through.
+
+My center of gravity is portfolio, program, PMO, and strategic operations leadership. The work usually starts when leaders can see activity but cannot yet trust the signal: demand is scattered, ownership is unclear, readiness is inconsistent, tradeoffs are not visible, and decisions are being made from status theater instead of usable evidence.
 
 This GitHub profile is a public-safe portfolio of how I structure that kind of work. It is not a software engineering portfolio and it is not a claim that these modules are deployed production systems. The repositories show governance frameworks, operating models, playbooks, templates, lessons learned, and anonymized examples of AI-assisted leadership work.
+
+Strongest hiring lanes:
+
+* Director or Principal, PMO / EPMO / PPMO
+* Director or Principal, Portfolio Governance
+* Director or Principal, Program Operations
+* Chief of Staff roles focused on executive cadence, cross-functional operating rhythm, portfolio visibility, and decision support
+* AI-enabled portfolio operations where governance, human review, and business value matter more than tool novelty
 
 ## Start Here
 
@@ -48,16 +58,17 @@ The strongest through-line is governed decision support.
 
 I am strongest where organizations need:
 
-* Enterprise PMO, EPMO, PPMO, portfolio governance, or program governance that is useful rather than ceremonial.
+* Principal- or Director-level PMO, EPMO, PPMO, portfolio governance, or program governance that is useful rather than ceremonial.
 * Executive operating rhythm, decision cadence, tradeoff review, sponsor alignment, and follow-through.
 * Intake, prioritization, scoring, sequencing, capacity visibility, readiness gates, and portfolio signal quality.
 * Revenue technology, finance systems, release readiness, UAT governance, controls, exposure, or value realization discipline.
 * Partner ecosystem, provider-network, launch-readiness, GTM, field-readiness, or external delivery governance.
 * AI-assisted portfolio operations where business value, human review, evidence, risk, and adoption discipline matter more than tool novelty.
+* Chief-of-Staff-like operating support when the role is about executive cadence, portfolio visibility, cross-functional follow-through, and decision support rather than formal corporate officer authority.
 
-Supported public framing: portfolio governance, executive operating systems, AI-assisted workflow architecture, evidence-bound decision support, PMO operating models, value realization governance, delivery readiness governance, and practical AI operating governance.
+Supported public framing: Principal / Director-level portfolio governance, PMO and EPMO operating models, executive operations, Chief-of-Staff-adjacent decision support, AI-assisted workflow architecture, value realization governance, delivery readiness governance, and practical AI operating governance.
 
-Important boundary: I do not present this as software engineering ownership, ML/data-science ownership, autonomous AI decisioning, legal/compliance authority, product-owner authority, or production SaaS deployment experience unless a specific source proves that scope.
+Important boundary: I do not present this as CEO, VP, GM, formal Chief of Staff, software engineering owner, ML/data-science owner, autonomous AI decision-maker, legal/compliance authority, product owner, or production SaaS operator unless a specific source proves that scope.
 
 ## Entry Paths
 
