@@ -26,5 +26,6 @@ The public examples show how to separate active work from demand, demand from ap
 ## Related journeys
 
 - [Messy Demand to Executive Review](https://policani.net/journeys/messy-demand-to-executive-review.html)
+- [Tradeoffs to Executive Decision Route](https://policani.net/journeys/tradeoffs-to-executive-decision-route.html)
 - [Delivery Readiness to Value Realization](https://policani.net/journeys/delivery-readiness-to-value-realization.html)
 - [Partner Ecosystem Governance Route](https://policani.net/journeys/partner-ecosystem-governance-route.html)

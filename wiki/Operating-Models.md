@@ -24,6 +24,7 @@ The strongest through-line is governed decision support: turning scattered activ
 
 ## Related journeys
 
+- [Tradeoffs to Executive Decision Route](https://policani.net/journeys/tradeoffs-to-executive-decision-route.html)
 - [Approved Intent to Chartered Delivery Start](https://policani.net/journeys/approved-intent-to-chartered-delivery-start.html)
 - [Delivery Readiness to Value Realization](https://policani.net/journeys/delivery-readiness-to-value-realization.html)
 - [Partner Ecosystem Governance Route](https://policani.net/journeys/partner-ecosystem-governance-route.html)
