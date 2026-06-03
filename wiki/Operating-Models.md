@@ -21,3 +21,9 @@ The strongest through-line is governed decision support: turning scattered activ
 - [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log)
 - [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system)
 - [Operating Patterns Source](https://github.com/policani/operating-patterns)
+
+## Related journeys
+
+- [Approved Intent to Chartered Delivery Start](https://policani.net/journeys/approved-intent-to-chartered-delivery-start.html)
+- [Delivery Readiness to Value Realization](https://policani.net/journeys/delivery-readiness-to-value-realization.html)
+- [Partner Ecosystem Governance Route](https://policani.net/journeys/partner-ecosystem-governance-route.html)

@@ -22,3 +22,9 @@ The public examples show how to separate active work from demand, demand from ap
 - [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent)
 - [Controls and Exposure Governance Toolkit](https://github.com/policani/controls-exposure-governance-toolkit)
 - [Value Realization Governance Ledger](https://github.com/policani/value-realization-governance-ledger)
+
+## Related journeys
+
+- [Messy Demand to Executive Review](https://policani.net/journeys/messy-demand-to-executive-review.html)
+- [Delivery Readiness to Value Realization](https://policani.net/journeys/delivery-readiness-to-value-realization.html)
+- [Partner Ecosystem Governance Route](https://policani.net/journeys/partner-ecosystem-governance-route.html)

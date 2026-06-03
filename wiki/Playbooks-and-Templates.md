@@ -20,3 +20,8 @@ They are designed to help a human lead do the work with better structure, not to
 - [Release Readiness and UAT Governance Pack](https://github.com/policani/release-readiness-uat-governance-pack)
 - [Executive Portfolio Review Pack Builder](https://github.com/policani/executive-portfolio-review-pack-builder)
 - [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log)
+
+## Related journeys
+
+- [Approved Intent to Chartered Delivery Start](https://policani.net/journeys/approved-intent-to-chartered-delivery-start.html)
+- [Artifact Source to Public-Safe Proof Review](https://policani.net/journeys/artifact-source-to-public-safe-proof-review.html)

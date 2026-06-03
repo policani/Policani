@@ -22,6 +22,12 @@ Strongest hiring lanes:
 * Portfolio artifacts: [source pages](https://github.com/policani/Policani/tree/main/wiki)
 * Anonymized governance artifacts: [operating-patterns](https://github.com/policani/operating-patterns)
 * Flagship journey: [messy demand to executive review](https://policani.net/journeys/messy-demand-to-executive-review.html)
+* Additional journeys:
+  * [AI idea to governed artifact lifecycle](https://policani.net/journeys/ai-idea-to-governed-artifact-lifecycle.html)
+  * [Approved intent to chartered delivery start](https://policani.net/journeys/approved-intent-to-chartered-delivery-start.html)
+  * [Delivery readiness to value realization](https://policani.net/journeys/delivery-readiness-to-value-realization.html)
+  * [Artifact source to public-safe proof review](https://policani.net/journeys/artifact-source-to-public-safe-proof-review.html)
+  * [Partner ecosystem governance route](https://policani.net/journeys/partner-ecosystem-governance-route.html)
 * LinkedIn: [linkedin.com/in/marcpolicani](https://www.linkedin.com/in/marcpolicani)
 
 ## Operating Phase Route
@@ -41,6 +47,7 @@ Because the GitHub Wiki backing repository is not initialized yet, the portfolio
 Start with:
 
 * [Portfolio Artifact Map](wiki/Portfolio-Artifact-Map.md)
+* [Artifact Source to Public-Safe Proof Review](https://policani.net/journeys/artifact-source-to-public-safe-proof-review.html)
 * [Governance Frameworks](wiki/Governance-Frameworks.md)
 * [Operating Models](wiki/Operating-Models.md)
 * [Playbooks and Templates](wiki/Playbooks-and-Templates.md)
@@ -112,6 +119,7 @@ Start with:
 * [Prove delivery readiness](https://github.com/policani/release-readiness-uat-governance-pack)
 * [Review controls and exposure](https://github.com/policani/controls-exposure-governance-toolkit)
 * [Track value realization](https://github.com/policani/value-realization-governance-ledger)
+* [Follow delivery readiness to value realization](https://policani.net/journeys/delivery-readiness-to-value-realization.html)
 
 These modules show how decisions, blockers, evidence gaps, signoffs, control owners, exposure, value claims, and realization confidence can be tracked without pretending the tool replaces accountable owners.
 
@@ -122,6 +130,7 @@ Start with:
 * [Review AI opportunities](https://github.com/policani/ai-opportunity-intelligence-review-system)
 * [Govern AI artifact lifecycle](https://github.com/policani/ai-artifact-lifecycle-governance-system)
 * [Inspect governance patterns](https://github.com/policani/operating-patterns)
+* [Follow AI idea to governed artifact lifecycle](https://policani.net/journeys/ai-idea-to-governed-artifact-lifecycle.html)
 
 These modules and artifacts show how rough AI ideas, vendor claims, prototypes, scripts, dashboards, agents, and informal workflow artifacts can be routed through proof, reliance risk, value signal, ownership, and human review before the business depends on them.
 
@@ -130,8 +139,9 @@ These modules and artifacts show how rough AI ideas, vendor claims, prototypes, 
 Start with:
 
 * [Inspect governance patterns](https://github.com/policani/operating-patterns)
+* [Follow partner ecosystem governance route](https://policani.net/journeys/partner-ecosystem-governance-route.html)
 
-Innovation portfolio governance and partner ecosystem governance are supported capability areas. The current proof sits in anonymized governance artifacts and professional evidence themes. A standalone product module would be a later packaging decision.
+Innovation portfolio governance and partner ecosystem governance are supported capability areas. The current proof sits in anonymized governance artifacts, professional evidence themes, and a public journey that shows how boundaries, readiness evidence, decision rights, and value follow-through can be reviewed without exposing client or employer detail.
 
 ### If the work needs authorization and handoff
 
@@ -139,6 +149,7 @@ Start with:
 
 * [Build business cases](https://github.com/policani/business-case-system)
 * [Initiate project charters](https://github.com/policani/project-charter-initiation-agent)
+* [Follow approved intent to chartered delivery start](https://policani.net/journeys/approved-intent-to-chartered-delivery-start.html)
 
 These modules show how early ideas become business cases, and how approved intent becomes project charters with scope, owners, assumptions, risks, dependencies, governance rhythm, and planning handoff.
 
@@ -160,11 +171,11 @@ Each module is designed to stand alone, but the stronger story is how they hand 
 | Module lane | Repositories |
 | --- | --- |
 | PMO formation and signal quality | [PPMO Formation Kit](https://github.com/policani/ppmo-formation-kit), [Portfolio Signal Quality Auditor](https://github.com/policani/portfolio-signal-quality-auditor), [Portfolio Intake and Readiness Triage System](https://github.com/policani/portfolio-intake-readiness-triage-system) |
-| AI operating governance | [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system), [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system), [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns) |
-| Authorization and initiation | [Business Case System](https://github.com/policani/business-case-system), [Project Charter Initiation Agent](https://github.com/policani/project-charter-initiation-agent) |
+| AI operating governance | [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system), [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system), [AI Idea to Governed Artifact Lifecycle](https://policani.net/journeys/ai-idea-to-governed-artifact-lifecycle.html), [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns) |
+| Authorization and initiation | [Business Case System](https://github.com/policani/business-case-system), [Project Charter Initiation Agent](https://github.com/policani/project-charter-initiation-agent), [Approved Intent to Chartered Delivery Start](https://policani.net/journeys/approved-intent-to-chartered-delivery-start.html) |
 | Portfolio decisions and sequencing | [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent), [Portfolio Capacity and Sequencing Planner](https://github.com/policani/portfolio-capacity-sequencing-planner), [Executive Portfolio Review Pack Builder](https://github.com/policani/executive-portfolio-review-pack-builder) |
-| Delivery readiness, controls, and value | [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log), [Release Readiness and UAT Governance Pack](https://github.com/policani/release-readiness-uat-governance-pack), [Controls and Exposure Governance Toolkit](https://github.com/policani/controls-exposure-governance-toolkit), [Value Realization Governance Ledger](https://github.com/policani/value-realization-governance-ledger) |
-| Innovation, partner, and external delivery governance | Covered in [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns) as generalized capability material. A standalone module would be a later packaging decision. |
+| Delivery readiness, controls, and value | [PMO Governance Operations Log](https://github.com/policani/pmo-governance-operations-log), [Release Readiness and UAT Governance Pack](https://github.com/policani/release-readiness-uat-governance-pack), [Controls and Exposure Governance Toolkit](https://github.com/policani/controls-exposure-governance-toolkit), [Value Realization Governance Ledger](https://github.com/policani/value-realization-governance-ledger), [Delivery Readiness to Value Realization](https://policani.net/journeys/delivery-readiness-to-value-realization.html) |
+| Innovation, partner, and external delivery governance | [Partner Ecosystem Governance Route](https://policani.net/journeys/partner-ecosystem-governance-route.html), plus [Anonymized Governance Artifacts](https://github.com/policani/operating-patterns) as generalized capability material. |
 
 ## Free Career and Writing Tools
 

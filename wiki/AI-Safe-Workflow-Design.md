@@ -17,5 +17,6 @@ They use AI for structure, synthesis, classification, drafting, review coverage,
 
 - [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system)
 - [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system)
+- [AI Idea to Governed Artifact Lifecycle](https://policani.net/journeys/ai-idea-to-governed-artifact-lifecycle.html)
 - [Portfolio Prioritization Scoring Agent](https://github.com/policani/portfolio-prioritization-scoring-agent)
 - [Operating Patterns Source](https://github.com/policani/operating-patterns)
