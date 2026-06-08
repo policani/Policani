@@ -204,6 +204,10 @@ These are free public tools and proofs of concept, separate from the PMO and por
 
 The public materials are generalized, synthetic, or scrubbed. They do not include employer names inside examples, client names, internal screenshots, exact dates, confidential financial figures, proprietary process descriptions, private career drafts, credentials, or details that would make a prior organization identifiable.
 
+## License
+
+Original written portfolio materials in this repository are licensed under CC BY 4.0 with attribution to Marco Policani. See `LICENSE.md`.
+
 ## Connect
 
 * Portfolio: [https://policani.net](https://policani.net)
