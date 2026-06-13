@@ -188,6 +188,7 @@ These are free public tools and proofs of concept, separate from the PMO and por
 | [Resume Evidence Engine](https://github.com/policani/resume-evidence-engine) | A career documentation tool that grounds AI-assisted drafting in actual career evidence, keeping pivots defensible while producing role-fit notes, resume drafts, cover letters, proof narratives, and DOCX handoff. |
 | [Job Boards Scanner](https://github.com/policani/job-boards-scanner) | A local-first job-search utility for collecting, filtering, and ranking public job postings by fit, posting signal, salary, location, source health, and age. |
 | [AI Prose Pattern Detector](https://github.com/policani/ai-prose-pattern-detector) | A writing review tool for spotting AI-shaped phrasing, generic business language, and revision opportunities. |
+| [Portfolio Signal Field](https://github.com/policani/portfolio-signal-field) | A configurable animated PMO portfolio signal background for landing-page hero banners and dashboard-style visual prototypes. |
 
 ## How I Work
 
