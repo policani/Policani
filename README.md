@@ -11,12 +11,6 @@ This GitHub profile is a public project shelf: practical governance tools, opera
 
 ## Project Areas
 
-**Portfolio hubs**
-
-* [Policani profile hub](https://github.com/policani/Policani)
-* [Portfolio website source](https://github.com/policani/policani.github.io)
-* [Anonymized Governance Patterns](https://github.com/policani/operating-patterns)
-
 **Portfolio intake and signal**
 
 * [PPMO Formation Kit](https://github.com/policani/ppmo-formation-kit)
