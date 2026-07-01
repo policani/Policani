@@ -56,6 +56,7 @@ This GitHub profile is a public project shelf: practical governance tools, opera
 
 **Visual and standalone experiments**
 
+* [Hero Banner Lab](https://github.com/policani/hero-banner-lab)
 * [Portfolio Signal Field](https://github.com/policani/portfolio-signal-field)
 * [Orbit Raiders](https://github.com/policani/orbit-raiders)
 
