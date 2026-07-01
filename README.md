@@ -45,6 +45,11 @@ This GitHub profile is a public project shelf: practical governance tools, opera
 
 * [AI Opportunity Intelligence Review System](https://github.com/policani/ai-opportunity-intelligence-review-system)
 * [AI Artifact Lifecycle Governance System](https://github.com/policani/ai-artifact-lifecycle-governance-system)
+
+**Agent operating systems and AI memory**
+
+* [Portable Cross-Agent Second Brain](https://github.com/policani/portable-cross-agent-second-brain)
+* [Portable Cross-Agent Second Brain - Personal](https://github.com/policani/portable-cross-agent-second-brain-personal)
 * [Subagent Operating Model](https://github.com/policani/subagent-operating-model)
 
 **Career, writing, and interview utilities**
